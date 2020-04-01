@@ -1,0 +1,27 @@
+{
+  "pivotal": {
+    "baseUri": "https://www.pivotaltracker.com/services/v5",
+    "credentials": {
+      "owner": {
+        "token": ""
+      }
+    }
+  },
+  "trello": {
+    "baseUri": "https://api.trello.com/1",
+    "credentials": {
+      "owner": {
+        "key": "",
+        "token": ""
+      }
+    }
+  },
+  "todoist": {
+    "baseUri": "https://api.todoist.com/rest/v1",
+    "credentials": {
+      "owner": {
+        "token": ""
+      }
+    }
+  }
+}
