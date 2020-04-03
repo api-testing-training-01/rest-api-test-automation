@@ -12,7 +12,7 @@ Feature: Projects
     }
     """
     And I save the request endpoint for deleting
-    Then I validate the response has status code 200
+    Then I validate the response has status code 500
       And Response body should match with "src/test/resources/schemas/examples/postSchema.json" json schema
       And I validate the response contains:
         | kind             | project                     |
