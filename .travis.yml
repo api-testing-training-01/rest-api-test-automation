@@ -6,12 +6,17 @@ jdk:
 
 addons:
   sonarcloud:
-    organization: "api-testing-training-01"
-    token: ${SONAR_TOKEN}
+    organization: api-testing-training-01
+    token: "${SONAR_TOKEN}"
 
 script:
   - ./gradlew check
   - sonar-scanner
+  - ./gradlew executeBDDTests
 
 notifications:
   email: true
+
+before_install:
+  - openssl aes-256-cbc -K $encrypted_c5fd3201494e_key -iv $encrypted_c5fd3201494e_iv
+    -in config.json.enc -out config.json -d
