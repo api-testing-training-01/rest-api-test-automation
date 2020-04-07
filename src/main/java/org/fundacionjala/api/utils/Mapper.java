@@ -13,6 +13,7 @@ public final class Mapper {
     private static final String CAP_REGEX = "[{}]";
     private static final String EMPTY_VAL = "";
     private static final String DOT_REGEX = "\\.";
+    private static final int SPLIT_LIMIT = 2;
 
     private Mapper() {
         // Default constructor for utility class.
@@ -34,7 +35,7 @@ public final class Mapper {
     }
 
     private static String getElementResponse(final Map<String, Object> context, final String element) {
-        String[] elementSplit = element.split(DOT_REGEX);
+        String[] elementSplit = element.split(DOT_REGEX, SPLIT_LIMIT);
         Response response = (Response) context.get(elementSplit[0]);
         return response.jsonPath().getString(elementSplit[1]);
     }
