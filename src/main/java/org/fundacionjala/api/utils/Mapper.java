@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 
 public final class Mapper {
 
-    private static final String DATA_MATCHER_REGEX = "\\{[A-Za-z._]+}";
+    private static final String DATA_MATCHER_REGEX = "\\{[0-9A-Za-z._\\-\\[\\]]+}";
     private static final String CAP_REGEX = "[{}]";
     private static final String EMPTY_VAL = "";
     private static final String DOT_REGEX = "\\.";
