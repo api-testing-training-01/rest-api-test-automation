@@ -101,4 +101,9 @@ public class RequestSteps {
         File schemaFile = new File(pathSchema);
         response.then().assertThat().body(matchesJsonSchema(schemaFile));
     }
+
+    @Then("I validate the response is {string}")
+    public void iValidateTheResponseIs(String responseBody) {
+        Assert.assertNull(responseBody);
+    }
 }
