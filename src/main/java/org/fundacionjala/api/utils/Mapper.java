@@ -38,4 +38,8 @@ public final class Mapper {
         Response response = (Response) context.get(elementSplit[0]);
         return response.jsonPath().getString(elementSplit[1]);
     }
+
+    public static String getEndPointBuilt(final Map<String, Object> context, final String element) {
+        return context.isEmpty() ? element : replaceData(context, element);
+    }
 }
