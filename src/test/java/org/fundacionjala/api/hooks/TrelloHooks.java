@@ -5,9 +5,7 @@ import io.cucumber.java.Before;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.fundacionjala.api.client.RequestManager;
-import org.fundacionjala.api.utils.AllureUtils;
 import org.fundacionjala.api.utils.Helper;
-import org.fundacionjala.api.utils.Mapper;
 import org.fundacionjala.api.utils.RequestSpecFactory;
 
 
@@ -19,12 +17,12 @@ public class TrelloHooks {
 
     @Before(value = "@CreateOrganization")
     public void createOrganization() {
-        String jsonBody = "{\n" +
-                "        \"displayName\": \"my_team\",\n" +
-                "        \"name\": \"my_team\",\n" +
-                "        \"teamType\":\"sales\",\n" +
-                "        \"desc\":\"My team description\"\n" +
-                "        }";
+        String jsonBody = "{\n"
+                + "        \"displayName\": \"my_team\",\n"
+                + "        \"name\": \"my_team\",\n"
+                + "        \"teamType\":\"sales\",\n"
+                + "        \"desc\":\"My team description\"\n"
+                + "        }";
         RequestSpecification requestSpecification = RequestSpecFactory.getRequestSpec("trello", "owner");
         Response response = RequestManager.doRequest("POST", requestSpecification,
                 "/organizations", jsonBody);
