@@ -4,5 +4,6 @@
 /build/
 /out/
 *.iml
+/allure-results/
 /java/
 config.json
