@@ -14,7 +14,6 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 
 import java.io.File;
-import java.util.List;
 import java.util.Map;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
@@ -107,5 +106,4 @@ public class RequestSteps {
         File schemaFile = new File(pathSchema);
         response.then().assertThat().body(matchesJsonSchema(schemaFile));
     }
-
 }
