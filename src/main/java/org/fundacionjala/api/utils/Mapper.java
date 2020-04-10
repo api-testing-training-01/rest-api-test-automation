@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 public final class Mapper {
 
@@ -32,6 +33,11 @@ public final class Mapper {
         }
         matcher.appendTail(result);
         return result.toString();
+    }
+
+    public static Map<String, String> replaceBodyData(final Map<String, Object> data, final Map<String, String> body) {
+        return body.entrySet().stream()
+                .collect(Collectors.toMap(Map.Entry::getKey, e -> Mapper.replaceData(data, e.getValue())));
     }
 
     private static String getElementResponse(final Map<String, Object> context, final String element) {
