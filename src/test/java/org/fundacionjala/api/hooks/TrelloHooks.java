@@ -45,8 +45,8 @@ public class TrelloHooks {
             throw new SkipException(
                     "Looks like you've exceeded your invitation quota. Please wait 60 minutes and try again");
         }
-        String memberId = response.jsonPath().getJsonObject("memberships[1].id");
-        helper.set("MemberId", memberId);
+//        String memberId = response.jsonPath().getJsonObject("memberships[1].id");
+        helper.set("Member", response);
     }
 
     @After(value = "@deletedOrganization")
