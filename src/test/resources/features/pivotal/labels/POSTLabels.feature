@@ -12,9 +12,9 @@ Feature: Labels
       """
     Then I validate the response has status code 200
       And I save the request endpoint for deleting
-      And I store the response as "Project"
+      And I save the response as "Project"
 
-  @deleteProject @acceptance
+  @cleanData @acceptance
   Scenario: Pivotal POST Labels
     Given I use the "pivotal" service and the "owner" account
     When I send a "POST" request to "/projects/{Project.id}/labels" with json body
@@ -31,7 +31,7 @@ Feature: Labels
         | name | My first label XXVI |
         | kind | label               |
 
-  @deleteProject @negative
+  @cleanData @negative
   Scenario: Pivotal POST Labels
     Given I use the "pivotal" service and the "owner" account
     When I send a "POST" request to "/projects/{Project.id}/labels" with json body
@@ -43,6 +43,6 @@ Feature: Labels
       """
     And I save the request endpoint for deleting
     Then I validate the response has status code 200
-    And I validate the response does not contains:
+    And I validate the response should not contain:
       | name | &^%$*GJG |
       | kind | project  |
