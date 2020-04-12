@@ -39,6 +39,7 @@ checkstyle {
 
 pmd {
     toolVersion = '6.0.0'
+    incrementalAnalysis = true
 }
 
 tasks.withType(Pmd) {

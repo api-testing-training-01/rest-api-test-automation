@@ -53,7 +53,6 @@ public class TrelloHooks {
     public void deletedOrganization() {
         Response postResponse = (Response) helper.get("Org");
         String organizationId = postResponse.jsonPath().getJsonObject("id");
-        Response response = RequestManager.delete(requestSpecification,
-                "/organizations/" + organizationId);
+        RequestManager.delete(requestSpecification, "/organizations/" + organizationId);
     }
 }
