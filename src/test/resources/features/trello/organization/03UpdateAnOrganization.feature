@@ -1,5 +1,5 @@
 @CreateOrganization @deletedOrganization
-Feature: Create a new Organization
+Feature: Update an Organization
   Background:
     Given I use the "trello" service and the "owner" account
 
@@ -101,11 +101,11 @@ Feature: Create a new Organization
       |statusCode|website   |
       |       200|          |
       |       200|https://www.youtube.com/|
-      |       400|!@#$%^&|
-      |       400|12345689|
-      |       400|123QWERTY|
-      |       400|123!@#QWERT|
-      |       400|Hello new team Hello new team Hello new team Hello new team Hello new team|
+      |       200|!@#$%^&|
+      |       200|12345689|
+      |       200|123QWERTY|
+      |       200|123!@#QWERT|
+      |       200|Hello new team Hello new team Hello new team Hello new team Hello new team|
 
   Scenario Outline: Validate organization prefs/permissionLevel field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body

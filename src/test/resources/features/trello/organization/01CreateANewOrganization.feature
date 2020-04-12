@@ -1,3 +1,4 @@
+@cleanData
 Feature: Create a new Organization
   Background:
     Given I use the "trello" service and the "owner" account
@@ -12,10 +13,7 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code 200
-      And I save the response as "P"
-      And I send a "DELETE" request to "/organizations/{P.id}"
-      And I validate the response has status code 200
-
+    Then I save the request endpoint for deleting
 
   Scenario Outline: Validate organization displayName field
     When I send a "POST" request to "/organizations" with json body
@@ -27,9 +25,7 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code <statusCode>
-      And I save the response as "P"
-      And I send a "DELETE" request to "/organizations/{P.id}"
-      And I validate the response has status code 200
+    Then I save the request endpoint for deleting
   Examples:
     |statusCode|displayName|
     |       200|my team    |
@@ -53,9 +49,7 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code <statusCode>
-    And I save the response as "P"
-    And I send a "DELETE" request to "/organizations/{P.id}"
-    And I validate the response has status code 200
+    Then I save the request endpoint for deleting
     Examples:
       |statusCode|name|
       |       200|my_team    |
@@ -79,9 +73,7 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code <statusCode>
-      And I save the response as "P"
-      And I send a "DELETE" request to "/organizations/{P.id}"
-      And I validate the response has status code 200
+    Then I save the request endpoint for deleting
     Examples:
       |statusCode|displayName|teamType|
       |       200|my_team00  |business|
@@ -114,9 +106,7 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code <statusCode>
-      And I save the response as "P"
-      And I send a "DELETE" request to "/organizations/{P.id}"
-      And I validate the response has status code 200
+    Then I save the request endpoint for deleting
     Examples:
       |statusCode|displayName|teamType          |desc|
       |       200|my_team01  |business          |           |
@@ -139,10 +129,7 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code 200
-      And I save the response as "P"
-      And I send a "DELETE" request to "/organizations/{P.id}"
-      And I validate the response has status code 200
-
+    Then I save the request endpoint for deleting
 
   @CreateOrganization @deletedOrganization
   Scenario: Verify that it is not possible to create a organization with the same displayName
@@ -156,6 +143,4 @@ Feature: Create a new Organization
         }
         """
     Then I validate the response has status code 200
-      And I save the response as "P"
-      And I send a "DELETE" request to "/organizations/{P.id}"
-      And I validate the response has status code 200
+    Then I save the request endpoint for deleting

@@ -1,5 +1,5 @@
 @CreateOrganization
-Feature: Get an organization
+Feature: Delete an organization
   Background:
     Given I use the "trello" service and the "owner" account
 

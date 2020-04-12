@@ -18,7 +18,7 @@ Feature: Update an organization's members
       |       200|trello.test.01@mailinator.com|trello.test.01|normal|
       |       403|trello.test.02@mailinator.com|trello.test.02| admin|
       |       400|trello.test.03@mailinator.com|trello.test.03|      |
-      |       429|trello.test.04@mailinator.com|              |normal|
+      |       200|trello.test.04@mailinator.com|              |normal|
       |       400|                             |trello.test.05|normal|
       |       400|trello.test.06@mailinator.com|trello.test.06|NORMAL|
       |       400|trello.test.06@mailinator.com|trello.test.06| ADMIN|

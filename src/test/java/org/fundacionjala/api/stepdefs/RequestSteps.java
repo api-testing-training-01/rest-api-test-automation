@@ -22,6 +22,8 @@ public class RequestSteps {
 
     private Response response;
     private Helper context;
+    private static final int OK_STATUS_CODE = 200;
+
 
     public RequestSteps(final Helper context) {
         this.context = context;
@@ -79,10 +81,12 @@ public class RequestSteps {
 
     @When("I save the request endpoint for deleting")
     public void iSaveTheRequestEndpointForDeleting() {
-        String lastEndpoint = (String) context.get("LAST_ENDPOINT");
-        String lastResponseId = ((Response) context.get("LAST_RESPONSE")).jsonPath().getString("id");
-        String finalEndpoint = String.format("%s/%s", lastEndpoint, lastResponseId);
-        context.addEndpoint(finalEndpoint);
+        if (response.getStatusCode() == OK_STATUS_CODE) {
+            String lastEndpoint = (String) context.get("LAST_ENDPOINT");
+            String lastResponseId = ((Response) context.get("LAST_RESPONSE")).jsonPath().getString("id");
+            String finalEndpoint = String.format("%s/%s", lastEndpoint, lastResponseId);
+            context.addEndpoint(finalEndpoint);
+        }
     }
 
     @Then("I validate the response has status code {int}")

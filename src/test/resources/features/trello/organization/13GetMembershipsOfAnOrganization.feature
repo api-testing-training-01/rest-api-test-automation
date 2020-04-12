@@ -7,6 +7,6 @@ Feature: Get memberships of an organization
     When I send a "GET" request to "/organizations/{Org.id}/memberships"
     Then I validate the response has status code 200
 
-  Scenario: Verify the the status code 400 is displayed when a fake organization id is used
+  Scenario: Verify the the status code 404 is displayed when a fake organization id is used
     When I send a "GET" request to "/organizations/fakeId123WWE/memberships"
     Then I validate the response has status code 404
