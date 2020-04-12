@@ -7,6 +7,7 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.fundacionjala.api.client.RequestManager;
 import org.fundacionjala.api.config.JsonHelper;
+import org.fundacionjala.api.utils.AllureUtils;
 import org.fundacionjala.api.utils.Helper;
 import org.fundacionjala.api.utils.Mapper;
 import org.json.simple.JSONObject;
@@ -33,6 +34,7 @@ public class RequestSteps {
         String builtEndpoint = Mapper.replaceData(context.getData(), endpoint);
         response = RequestManager.doRequest(httpMethod, requestSpecification, builtEndpoint,
                 Mapper.replaceData(context.getData(), jsonBody));
+        AllureUtils.attachStepContent("Request body:", jsonBody);
         context.set("LAST_ENDPOINT", builtEndpoint);
         context.set("LAST_RESPONSE", response);
     }
@@ -45,6 +47,7 @@ public class RequestSteps {
         String builtEndpoint = Mapper.replaceData(context.getData(), endpoint);
         response = RequestManager.doRequest(httpMethod, requestSpecification, builtEndpoint,
                 Mapper.replaceData(context.getData(), jsonBody.toJSONString()));
+        AllureUtils.attachStepContent("Request body:", jsonBody.toJSONString());
         context.set("LAST_ENDPOINT", builtEndpoint);
         context.set("LAST_RESPONSE", response);
     }
@@ -53,7 +56,8 @@ public class RequestSteps {
     public void iSendARequestTo(final String httpMethod, final String endpoint, final Map<String, String> body) {
         RequestSpecification requestSpecification = (RequestSpecification) context.get("REQUEST_SPEC");
         String builtEndpoint = Mapper.replaceData(context.getData(), endpoint);
-        response = RequestManager.doRequest(httpMethod, requestSpecification, builtEndpoint, body);
+        Map<String, String> bodyProcessed = Mapper.replaceBodyData(context.getData(), body);
+        response = RequestManager.doRequest(httpMethod, requestSpecification, builtEndpoint, bodyProcessed);
         context.set("LAST_ENDPOINT", builtEndpoint);
         context.set("LAST_RESPONSE", response);
     }
@@ -69,6 +73,7 @@ public class RequestSteps {
 
     @When("I save the response as {string}")
     public void iSaveTheResponseAs(final String key) {
+        AllureUtils.attachStepContent("Response body:", response.getBody().asString());
         context.set(key, response);
     }
 
