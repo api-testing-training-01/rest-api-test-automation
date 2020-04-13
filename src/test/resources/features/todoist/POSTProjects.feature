@@ -37,13 +37,5 @@ Feature: Todoist Projects
       | name             | Test_FV_02 |
     And I send a "GET" request to "/projects/{LAST_RESPONSE.id}"
     And I validate the response has status code 200
-    #And I use the "todoist" service and the "owner" account
-#    When I send a "POST" request to "/projects/{LAST_RESPONSE.id}" with datatable
-#      |name|Test_FV_name_updated|
-#    Then I validate the response has status code 204
-#    And I send a "GET" request to "/projects/{LAST_RESPONSE.id}"
-#    And I validate the response contains:
-#      | kind             | project              |
-#      | name             | Test_FV_name_updated |
     And I send a "DELETE" request to "/projects/{LAST_RESPONSE.id}"
     Then I validate the response has status code 204
