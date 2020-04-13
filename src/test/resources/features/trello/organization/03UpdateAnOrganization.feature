@@ -3,6 +3,7 @@ Feature: Update an Organization
   Background:
     Given I use the "trello" service and the "owner" account
 
+  @acceptance @regression @negative
   Scenario Outline: Validate organization displayName field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body
         """
@@ -11,6 +12,7 @@ Feature: Update an Organization
         }
         """
     Then I validate the response has status code <statusCode>
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/03UpdateAnOrganization.json" json schema
     Examples:
       |statusCode|displayName|
       |       200|my team    |
@@ -22,7 +24,7 @@ Feature: Update an Organization
       |       400|My team x 100 My team x 100 My team x 100 My team x 100 My team x 100 My team x 100 My team x 100 My+1|
       |       400|           |
 
-
+  @acceptance @regression @negative
   Scenario Outline: Validate organization name field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body
         """
@@ -31,6 +33,7 @@ Feature: Update an Organization
         }
         """
     Then I validate the response has status code <statusCode>
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/03UpdateAnOrganization.json" json schema
     Examples:
       |statusCode|name|
       |       400|my_team    |
@@ -42,7 +45,7 @@ Feature: Update an Organization
       |       200|12346_78   |
       |       400|!@#$%      |
 
-
+  @acceptance @regression @negative
   Scenario Outline: Validate organization type field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body
         """
@@ -51,6 +54,7 @@ Feature: Update an Organization
         }
         """
     Then I validate the response has status code <statusCode>
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/03UpdateAnOrganization.json" json schema
     Examples:
       |statusCode|teamType|
       |       200|business|
@@ -71,6 +75,7 @@ Feature: Update an Organization
       |       400|Sales|
       |       400|Other|
 
+  @acceptance @regression @negative
   Scenario Outline: Validate organization Description field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body
         """
@@ -79,6 +84,7 @@ Feature: Update an Organization
         }
         """
     Then I validate the response has status code <statusCode>
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/03UpdateAnOrganization.json" json schema
     Examples:
       |statusCode|desc|
       |       200|          |
@@ -89,6 +95,7 @@ Feature: Update an Organization
       |       200|123!@#QWERT|
       |       200|Hello new team Hello new team Hello new team Hello new team Hello new team|
 
+  @acceptance @regression @negative
   Scenario Outline: Validate organization website field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body
         """
@@ -97,6 +104,7 @@ Feature: Update an Organization
         }
         """
     Then I validate the response has status code <statusCode>
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/03UpdateAnOrganization.json" json schema
     Examples:
       |statusCode|website   |
       |       200|          |
@@ -107,6 +115,7 @@ Feature: Update an Organization
       |       200|123!@#QWERT|
       |       200|Hello new team Hello new team Hello new team Hello new team Hello new team|
 
+  @acceptance @regression @negative
   Scenario Outline: Validate organization prefs/permissionLevel field
     When I send a "PUT" request to "/organizations/{Org.id}" with json body
         """
@@ -115,6 +124,7 @@ Feature: Update an Organization
         }
         """
     Then I validate the response has status code <statusCode>
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/03UpdateAnOrganization.json" json schema
     Examples:
       |statusCode|prefs/permissionLevel|
       |       400|          |

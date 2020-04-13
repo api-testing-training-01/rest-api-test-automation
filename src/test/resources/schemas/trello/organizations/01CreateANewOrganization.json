@@ -1,0 +1,174 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": [
+    "id",
+    "name",
+    "displayName",
+    "descData",
+    "website",
+    "teamType",
+    "desc",
+    "url",
+    "logoHash",
+    "logoUrl",
+    "products",
+    "powerUps",
+    "idMemberCreator",
+    "limits"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e93b1f465e9c969b9d2b1bd"
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "team0254"
+      ]
+    },
+    "displayName": {
+      "$id": "#/properties/displayName",
+      "type": "string",
+      "title": "The Displayname Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Team00078"
+      ]
+    },
+    "descData": {
+      "$id": "#/properties/descData",
+      "type": "object",
+      "title": "The Descdata Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "emoji": {}
+        }
+      ],
+      "required": [
+        "emoji"
+      ],
+      "properties": {
+        "emoji": {
+          "$id": "#/properties/descData/properties/emoji",
+          "type": "object",
+          "title": "The Emoji Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {}
+          ]
+        }
+      }
+    },
+    "website": {
+      "$id": "#/properties/website",
+      "$type": "string",
+      "title": "The Website Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://trello.com/"
+      ]
+    },
+    "teamType": {
+      "$id": "#/properties/teamType",
+      "type": "string",
+      "title": "The Teamtype Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "business"
+      ]
+    },
+    "desc": {
+      "$id": "#/properties/desc",
+      "type": "string",
+      "title": "The Desc Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Team02 description"
+      ]
+    },
+    "url": {
+      "$id": "#/properties/url",
+      "type": "string",
+      "title": "The Url Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "https://trello.com/team0254"
+      ]
+    },
+    "logoHash": {
+      "$id": "#/properties/logoHash",
+      "title": "The Logohash Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "logoUrl": {
+      "$id": "#/properties/logoUrl",
+      "title": "The Logourl Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "products": {
+      "$id": "#/properties/products",
+      "type": "array",
+      "title": "The Products Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": []
+    },
+    "powerUps": {
+      "$id": "#/properties/powerUps",
+      "type": "array",
+      "title": "The Powerups Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": []
+    },
+    "idMemberCreator": {
+      "$id": "#/properties/idMemberCreator",
+      "type": "string",
+      "title": "The Idmembercreator Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e6edbbb25fbd021ce639b91"
+      ]
+    },
+    "limits": {
+      "$id": "#/properties/limits",
+      "type": "object",
+      "title": "The Limits Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {}
+      ]
+    }
+  }
+}

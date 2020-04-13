@@ -1,0 +1,1018 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "prefs": {
+          "voting": "disabled",
+          "canInvite": true,
+          "canBeOrg": true,
+          "permissionLevel": "org",
+          "comments": "members",
+          "invitations": "members",
+          "cardCovers": true,
+          "background": "5e92397e6ab226460dadee8e",
+          "canBeEnterprise": true,
+          "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/c7d6b0f6d7ea90a4629be964056c1e3e/photo-1586596436497-8d6f8d1d921f",
+          "backgroundImageScaled": [
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 67.0,
+              "height": 100.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 128.0,
+              "height": 192.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 320.0,
+              "height": 480.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 640.0,
+              "height": 960.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 683.0,
+              "height": 1024.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 853.0,
+              "height": 1280.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 1280.0,
+              "height": 1920.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+              "width": 1066.0,
+              "height": 1600.0
+            },
+            {
+              "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/c7d6b0f6d7ea90a4629be964056c1e3e/photo-1586596436497-8d6f8d1d921f",
+              "width": 1365.0,
+              "height": 2048.0
+            }
+          ],
+          "backgroundTile": false,
+          "backgroundTopColor": "#c04e37",
+          "cardAging": "regular",
+          "isTemplate": false,
+          "backgroundBottomColor": "#842fbb",
+          "canBePublic": true,
+          "hideVotes": false,
+          "backgroundBrightness": "dark",
+          "calendarFeedEnabled": false,
+          "selfJoin": true,
+          "canBePrivate": true
+        },
+        "powerUps": [],
+        "ixUpdate": null,
+        "dateLastView": "2020-04-13T02:18:52.357Z",
+        "id": "5e93cc09411aaf77589847e3",
+        "name": "teast",
+        "descData": null,
+        "closed": false,
+        "memberships": [
+          {
+            "id": "5e93cc09411aaf77589847e4",
+            "unconfirmed": false,
+            "deactivated": false,
+            "idMember": "5e6edbbb25fbd021ce639b91",
+            "memberType": "admin"
+          }
+        ],
+        "shortLink": "LcYULCl8",
+        "subscribed": false,
+        "dateLastActivity": null,
+        "shortUrl": "https://trello.com/b/LcYULCl8",
+        "starred": false,
+        "creationMethod": null,
+        "idOrganization": "5e93cbd1e6b42d755e8b0130",
+        "desc": "",
+        "url": "https://trello.com/b/LcYULCl8/teast",
+        "idTags": [],
+        "enterpriseOwned": false,
+        "idEnterprise": null,
+        "pinned": null,
+        "templateGallery": null,
+        "labelNames": {
+          "sky": "",
+          "yellow": "",
+          "red": "",
+          "orange": "",
+          "purple": "",
+          "black": "",
+          "pink": "",
+          "lime": "",
+          "blue": "",
+          "green": ""
+        },
+        "datePluginDisable": null,
+        "idBoardSource": null,
+        "limits": null
+      }
+    ],
+    "required": [
+      "name",
+      "desc",
+      "descData",
+      "closed",
+      "idOrganization",
+      "idEnterprise",
+      "limits",
+      "pinned",
+      "shortLink",
+      "powerUps",
+      "dateLastActivity",
+      "idTags",
+      "datePluginDisable",
+      "creationMethod",
+      "ixUpdate",
+      "enterpriseOwned",
+      "idBoardSource",
+      "id",
+      "starred",
+      "url",
+      "prefs",
+      "subscribed",
+      "labelNames",
+      "dateLastView",
+      "shortUrl",
+      "templateGallery",
+      "memberships"
+    ],
+    "properties": {
+      "name": {
+        "$id": "#/items/properties/name",
+        "type": "string",
+        "title": "The Name Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "teast"
+        ]
+      },
+      "desc": {
+        "$id": "#/items/properties/desc",
+        "type": "string",
+        "title": "The Desc Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          ""
+        ]
+      },
+      "descData": {
+        "$id": "#/items/properties/descData",
+        "title": "The Descdata Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "closed": {
+        "$id": "#/items/properties/closed",
+        "type": "boolean",
+        "title": "The Closed Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": false,
+        "examples": [
+          false
+        ]
+      },
+      "idOrganization": {
+        "$id": "#/items/properties/idOrganization",
+        "type": "string",
+        "title": "The Idorganization Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "5e93cbd1e6b42d755e8b0130"
+        ]
+      },
+      "idEnterprise": {
+        "$id": "#/items/properties/idEnterprise",
+        "title": "The Identerprise Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "limits": {
+        "$id": "#/items/properties/limits",
+        "title": "The Limits Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "pinned": {
+        "$id": "#/items/properties/pinned",
+        "title": "The Pinned Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "shortLink": {
+        "$id": "#/items/properties/shortLink",
+        "type": "string",
+        "title": "The Shortlink Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "LcYULCl8"
+        ]
+      },
+      "powerUps": {
+        "$id": "#/items/properties/powerUps",
+        "type": "array",
+        "title": "The Powerups Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": []
+      },
+      "dateLastActivity": {
+        "$id": "#/items/properties/dateLastActivity",
+        "title": "The Datelastactivity Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "idTags": {
+        "$id": "#/items/properties/idTags",
+        "type": "array",
+        "title": "The Idtags Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": []
+      },
+      "datePluginDisable": {
+        "$id": "#/items/properties/datePluginDisable",
+        "title": "The Dateplugindisable Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "creationMethod": {
+        "$id": "#/items/properties/creationMethod",
+        "title": "The Creationmethod Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "ixUpdate": {
+        "$id": "#/items/properties/ixUpdate",
+        "title": "The Ixupdate Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "enterpriseOwned": {
+        "$id": "#/items/properties/enterpriseOwned",
+        "type": "boolean",
+        "title": "The Enterpriseowned Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": false,
+        "examples": [
+          false
+        ]
+      },
+      "idBoardSource": {
+        "$id": "#/items/properties/idBoardSource",
+        "title": "The Idboardsource Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "string",
+        "title": "The Id Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "5e93cc09411aaf77589847e3"
+        ]
+      },
+      "starred": {
+        "$id": "#/items/properties/starred",
+        "type": "boolean",
+        "title": "The Starred Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": false,
+        "examples": [
+          false
+        ]
+      },
+      "url": {
+        "$id": "#/items/properties/url",
+        "type": "string",
+        "title": "The Url Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "https://trello.com/b/LcYULCl8/teast"
+        ]
+      },
+      "prefs": {
+        "$id": "#/items/properties/prefs",
+        "type": "object",
+        "title": "The Prefs Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "hideVotes": false,
+            "backgroundBrightness": "dark",
+            "calendarFeedEnabled": false,
+            "selfJoin": true,
+            "canBePrivate": true,
+            "voting": "disabled",
+            "permissionLevel": "org",
+            "canBeOrg": true,
+            "canInvite": true,
+            "comments": "members",
+            "background": "5e92397e6ab226460dadee8e",
+            "cardCovers": true,
+            "invitations": "members",
+            "canBeEnterprise": true,
+            "backgroundImageScaled": [
+              {
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 67.0,
+                "height": 100.0
+              },
+              {
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 128.0,
+                "height": 192.0
+              },
+              {
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 320.0,
+                "height": 480.0
+              },
+              {
+                "height": 960.0,
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 640.0
+              },
+              {
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 683.0,
+                "height": 1024.0
+              },
+              {
+                "height": 1280.0,
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 853.0
+              },
+              {
+                "width": 1280.0,
+                "height": 1920.0,
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg"
+              },
+              {
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                "width": 1066.0,
+                "height": 1600.0
+              },
+              {
+                "height": 2048.0,
+                "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/c7d6b0f6d7ea90a4629be964056c1e3e/photo-1586596436497-8d6f8d1d921f",
+                "width": 1365.0
+              }
+            ],
+            "backgroundImage": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/c7d6b0f6d7ea90a4629be964056c1e3e/photo-1586596436497-8d6f8d1d921f",
+            "backgroundTile": false,
+            "backgroundTopColor": "#c04e37",
+            "cardAging": "regular",
+            "isTemplate": false,
+            "backgroundBottomColor": "#842fbb",
+            "canBePublic": true
+          }
+        ],
+        "required": [
+          "permissionLevel",
+          "hideVotes",
+          "voting",
+          "comments",
+          "invitations",
+          "selfJoin",
+          "cardCovers",
+          "isTemplate",
+          "cardAging",
+          "calendarFeedEnabled",
+          "background",
+          "backgroundImage",
+          "backgroundImageScaled",
+          "backgroundTile",
+          "backgroundBrightness",
+          "backgroundBottomColor",
+          "backgroundTopColor",
+          "canBePublic",
+          "canBeEnterprise",
+          "canBeOrg",
+          "canBePrivate",
+          "canInvite"
+        ],
+        "properties": {
+          "permissionLevel": {
+            "$id": "#/items/properties/prefs/properties/permissionLevel",
+            "type": "string",
+            "title": "The Permissionlevel Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "org"
+            ]
+          },
+          "hideVotes": {
+            "$id": "#/items/properties/prefs/properties/hideVotes",
+            "type": "boolean",
+            "title": "The Hidevotes Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "voting": {
+            "$id": "#/items/properties/prefs/properties/voting",
+            "type": "string",
+            "title": "The Voting Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "disabled"
+            ]
+          },
+          "comments": {
+            "$id": "#/items/properties/prefs/properties/comments",
+            "type": "string",
+            "title": "The Comments Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "members"
+            ]
+          },
+          "invitations": {
+            "$id": "#/items/properties/prefs/properties/invitations",
+            "type": "string",
+            "title": "The Invitations Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "members"
+            ]
+          },
+          "selfJoin": {
+            "$id": "#/items/properties/prefs/properties/selfJoin",
+            "type": "boolean",
+            "title": "The Selfjoin Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "cardCovers": {
+            "$id": "#/items/properties/prefs/properties/cardCovers",
+            "type": "boolean",
+            "title": "The Cardcovers Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "isTemplate": {
+            "$id": "#/items/properties/prefs/properties/isTemplate",
+            "type": "boolean",
+            "title": "The Istemplate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "cardAging": {
+            "$id": "#/items/properties/prefs/properties/cardAging",
+            "type": "string",
+            "title": "The Cardaging Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "regular"
+            ]
+          },
+          "calendarFeedEnabled": {
+            "$id": "#/items/properties/prefs/properties/calendarFeedEnabled",
+            "type": "boolean",
+            "title": "The Calendarfeedenabled Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "background": {
+            "$id": "#/items/properties/prefs/properties/background",
+            "type": "string",
+            "title": "The Background Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "5e92397e6ab226460dadee8e"
+            ]
+          },
+          "backgroundImage": {
+            "$id": "#/items/properties/prefs/properties/backgroundImage",
+            "type": "string",
+            "title": "The Backgroundimage Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/c7d6b0f6d7ea90a4629be964056c1e3e/photo-1586596436497-8d6f8d1d921f"
+            ]
+          },
+          "backgroundImageScaled": {
+            "$id": "#/items/properties/prefs/properties/backgroundImageScaled",
+            "type": "array",
+            "title": "The Backgroundimagescaled Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+              "$id": "#/items/properties/prefs/properties/backgroundImageScaled/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": {},
+              "examples": [
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 67.0,
+                  "height": 100.0
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/128x192/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 128.0,
+                  "height": 192.0
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/320x480/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 320.0,
+                  "height": 480.0
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/640x960/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 640.0,
+                  "height": 960.0
+                },
+                {
+                  "width": 683.0,
+                  "height": 1024.0,
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/683x1024/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg"
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/853x1280/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 853.0,
+                  "height": 1280.0
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1280x1920/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 1280.0,
+                  "height": 1920.0
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/1066x1600/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg",
+                  "width": 1066.0,
+                  "height": 1600.0
+                },
+                {
+                  "url": "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/original/c7d6b0f6d7ea90a4629be964056c1e3e/photo-1586596436497-8d6f8d1d921f",
+                  "width": 1365.0,
+                  "height": 2048.0
+                }
+              ],
+              "required": [
+                "width",
+                "height",
+                "url"
+              ],
+              "properties": {
+                "width": {
+                  "$id": "#/items/properties/prefs/properties/backgroundImageScaled/items/properties/width",
+                  "type": "integer",
+                  "title": "The Width Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    67
+                  ]
+                },
+                "height": {
+                  "$id": "#/items/properties/prefs/properties/backgroundImageScaled/items/properties/height",
+                  "type": "integer",
+                  "title": "The Height Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": 0,
+                  "examples": [
+                    100
+                  ]
+                },
+                "url": {
+                  "$id": "#/items/properties/prefs/properties/backgroundImageScaled/items/properties/url",
+                  "type": "string",
+                  "title": "The Url Schema",
+                  "description": "An explanation about the purpose of this instance.",
+                  "default": "",
+                  "examples": [
+                    "https://trello-backgrounds.s3.amazonaws.com/SharedBackground/67x100/44097ec60dd1549b6b98bf64d0e86eae/photo-1586596436497-8d6f8d1d921f.jpg"
+                  ]
+                }
+              }
+            }
+          },
+          "backgroundTile": {
+            "$id": "#/items/properties/prefs/properties/backgroundTile",
+            "type": "boolean",
+            "title": "The Backgroundtile Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "backgroundBrightness": {
+            "$id": "#/items/properties/prefs/properties/backgroundBrightness",
+            "type": "string",
+            "title": "The Backgroundbrightness Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "dark"
+            ]
+          },
+          "backgroundBottomColor": {
+            "$id": "#/items/properties/prefs/properties/backgroundBottomColor",
+            "type": "string",
+            "title": "The Backgroundbottomcolor Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "#842fbb"
+            ]
+          },
+          "backgroundTopColor": {
+            "$id": "#/items/properties/prefs/properties/backgroundTopColor",
+            "type": "string",
+            "title": "The Backgroundtopcolor Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "#c04e37"
+            ]
+          },
+          "canBePublic": {
+            "$id": "#/items/properties/prefs/properties/canBePublic",
+            "type": "boolean",
+            "title": "The Canbepublic Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "canBeEnterprise": {
+            "$id": "#/items/properties/prefs/properties/canBeEnterprise",
+            "type": "boolean",
+            "title": "The Canbeenterprise Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "canBeOrg": {
+            "$id": "#/items/properties/prefs/properties/canBeOrg",
+            "type": "boolean",
+            "title": "The Canbeorg Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "canBePrivate": {
+            "$id": "#/items/properties/prefs/properties/canBePrivate",
+            "type": "boolean",
+            "title": "The Canbeprivate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "canInvite": {
+            "$id": "#/items/properties/prefs/properties/canInvite",
+            "type": "boolean",
+            "title": "The Caninvite Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              true
+            ]
+          }
+        }
+      },
+      "subscribed": {
+        "$id": "#/items/properties/subscribed",
+        "type": "boolean",
+        "title": "The Subscribed Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": false,
+        "examples": [
+          false
+        ]
+      },
+      "labelNames": {
+        "$id": "#/items/properties/labelNames",
+        "type": "object",
+        "title": "The Labelnames Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "green": "",
+            "sky": "",
+            "yellow": "",
+            "red": "",
+            "purple": "",
+            "orange": "",
+            "black": "",
+            "pink": "",
+            "lime": "",
+            "blue": ""
+          }
+        ],
+        "required": [
+          "green",
+          "yellow",
+          "orange",
+          "red",
+          "purple",
+          "blue",
+          "sky",
+          "lime",
+          "pink",
+          "black"
+        ],
+        "properties": {
+          "green": {
+            "$id": "#/items/properties/labelNames/properties/green",
+            "type": "string",
+            "title": "The Green Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "yellow": {
+            "$id": "#/items/properties/labelNames/properties/yellow",
+            "type": "string",
+            "title": "The Yellow Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "orange": {
+            "$id": "#/items/properties/labelNames/properties/orange",
+            "type": "string",
+            "title": "The Orange Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "red": {
+            "$id": "#/items/properties/labelNames/properties/red",
+            "type": "string",
+            "title": "The Red Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "purple": {
+            "$id": "#/items/properties/labelNames/properties/purple",
+            "type": "string",
+            "title": "The Purple Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "blue": {
+            "$id": "#/items/properties/labelNames/properties/blue",
+            "type": "string",
+            "title": "The Blue Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "sky": {
+            "$id": "#/items/properties/labelNames/properties/sky",
+            "type": "string",
+            "title": "The Sky Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "lime": {
+            "$id": "#/items/properties/labelNames/properties/lime",
+            "type": "string",
+            "title": "The Lime Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "pink": {
+            "$id": "#/items/properties/labelNames/properties/pink",
+            "type": "string",
+            "title": "The Pink Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          },
+          "black": {
+            "$id": "#/items/properties/labelNames/properties/black",
+            "type": "string",
+            "title": "The Black Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              ""
+            ]
+          }
+        }
+      },
+      "dateLastView": {
+        "$id": "#/items/properties/dateLastView",
+        "type": "string",
+        "title": "The Datelastview Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "2020-04-13T02:18:52.357Z"
+        ]
+      },
+      "shortUrl": {
+        "$id": "#/items/properties/shortUrl",
+        "type": "string",
+        "title": "The Shorturl Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "https://trello.com/b/LcYULCl8"
+        ]
+      },
+      "templateGallery": {
+        "$id": "#/items/properties/templateGallery",
+        "title": "The Templategallery Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      },
+      "memberships": {
+        "$id": "#/items/properties/memberships",
+        "type": "array",
+        "title": "The Memberships Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": [],
+        "items": {
+          "$id": "#/items/properties/memberships/items",
+          "type": "object",
+          "title": "The Items Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "id": "5e93cc09411aaf77589847e4",
+              "unconfirmed": false,
+              "deactivated": false,
+              "idMember": "5e6edbbb25fbd021ce639b91",
+              "memberType": "admin"
+            }
+          ],
+          "required": [
+            "id",
+            "idMember",
+            "memberType",
+            "unconfirmed",
+            "deactivated"
+          ],
+          "properties": {
+            "id": {
+              "$id": "#/items/properties/memberships/items/properties/id",
+              "type": "string",
+              "title": "The Id Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "5e93cc09411aaf77589847e4"
+              ]
+            },
+            "idMember": {
+              "$id": "#/items/properties/memberships/items/properties/idMember",
+              "type": "string",
+              "title": "The Idmember Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "5e6edbbb25fbd021ce639b91"
+              ]
+            },
+            "memberType": {
+              "$id": "#/items/properties/memberships/items/properties/memberType",
+              "type": "string",
+              "title": "The Membertype Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "admin"
+              ]
+            },
+            "unconfirmed": {
+              "$id": "#/items/properties/memberships/items/properties/unconfirmed",
+              "type": "boolean",
+              "title": "The Unconfirmed Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": false,
+              "examples": [
+                false
+              ]
+            },
+            "deactivated": {
+              "$id": "#/items/properties/memberships/items/properties/deactivated",
+              "type": "boolean",
+              "title": "The Deactivated Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": false,
+              "examples": [
+                false
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

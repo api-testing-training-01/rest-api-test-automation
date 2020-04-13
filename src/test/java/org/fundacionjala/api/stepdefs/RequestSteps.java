@@ -107,7 +107,9 @@ public class RequestSteps {
 
     @Then("Response body should match with {string} json schema")
     public void responseBodyShouldMatchWithJsonSchema(final String pathSchema) {
-        File schemaFile = new File(pathSchema);
-        response.then().assertThat().body(matchesJsonSchema(schemaFile));
+        if (OK_STATUS_CODE == response.statusCode()) {
+            File schemaFile = new File(pathSchema);
+            response.then().assertThat().body(matchesJsonSchema(schemaFile));
+        }
     }
 }

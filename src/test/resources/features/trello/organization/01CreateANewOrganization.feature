@@ -3,6 +3,7 @@ Feature: Create a new Organization
   Background:
     Given I use the "trello" service and the "owner" account
 
+  @acceptance @regression
   Scenario: Create an organization
     When I send a "POST" request to "/organizations" with json body
         """
@@ -14,7 +15,9 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code 200
     Then I save the request endpoint for deleting
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
 
+  @regression
   Scenario Outline: Validate organization displayName field
     When I send a "POST" request to "/organizations" with json body
         """
@@ -26,7 +29,8 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code <statusCode>
     Then I save the request endpoint for deleting
-  Examples:
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
+    Examples:
     |statusCode|displayName|
     |       200|my team    |
     |       200|MY TEAM    |
@@ -37,7 +41,7 @@ Feature: Create a new Organization
     |       400|My team x 100 My team x 100 My team x 100 My team x 100 My team x 100 My team x 100 My team x 100 My+1|
     |       400|           |
 
-
+  @regression
   Scenario Outline: Validate organization name field
     When I send a "POST" request to "/organizations" with json body
         """
@@ -50,6 +54,7 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code <statusCode>
     Then I save the request endpoint for deleting
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
     Examples:
       |statusCode|name|
       |       200|my_team    |
@@ -61,7 +66,7 @@ Feature: Create a new Organization
       |       200|12346_78   |
       |       200|!@#$%      |
 
-
+  @regression
   Scenario Outline: Validate organization type field
     When I send a "POST" request to "/organizations" with json body
         """
@@ -74,6 +79,7 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code <statusCode>
     Then I save the request endpoint for deleting
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
     Examples:
       |statusCode|displayName|teamType|
       |       200|my_team00  |business|
@@ -94,7 +100,7 @@ Feature: Create a new Organization
       |       400|my_team15  |Sales|
       |       400|my_team16  |Other|
 
-
+  @regression
   Scenario Outline: Validate organization Description field
     When I send a "POST" request to "/organizations" with json body
         """
@@ -107,6 +113,7 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code <statusCode>
     Then I save the request endpoint for deleting
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
     Examples:
       |statusCode|displayName|teamType          |desc|
       |       200|my_team01  |business          |           |
@@ -116,7 +123,7 @@ Feature: Create a new Organization
       |       200|my_team05  |marketing         |123QWERTY|
       |       200|my_team06  |sales             |123!@#QWERT|
 
-
+  @regression
   @CreateOrganization @deletedOrganization
   Scenario: Verify that it is not possible to create a organization with the same name
     When I send a "POST" request to "/organizations" with json body
@@ -130,7 +137,9 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code 200
     Then I save the request endpoint for deleting
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
 
+  @regression
   @CreateOrganization @deletedOrganization
   Scenario: Verify that it is not possible to create a organization with the same displayName
     When I send a "POST" request to "/organizations" with json body
@@ -144,3 +153,5 @@ Feature: Create a new Organization
         """
     Then I validate the response has status code 200
     Then I save the request endpoint for deleting
+    Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
+
