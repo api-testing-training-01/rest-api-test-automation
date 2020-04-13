@@ -56,7 +56,8 @@ public class RequestSteps {
     public void iSendARequestTo(final String httpMethod, final String endpoint, final Map<String, String> body) {
         RequestSpecification requestSpecification = (RequestSpecification) context.get("REQUEST_SPEC");
         String builtEndpoint = Mapper.replaceData(context.getData(), endpoint);
-        response = RequestManager.doRequest(httpMethod, requestSpecification, builtEndpoint, body);
+        Map<String, String> bodyProcessed = Mapper.replaceBodyData(context.getData(), body);
+        response = RequestManager.doRequest(httpMethod, requestSpecification, builtEndpoint, bodyProcessed);
         context.set("LAST_ENDPOINT", builtEndpoint);
         context.set("LAST_RESPONSE", response);
     }
