@@ -16,6 +16,10 @@ Feature: Create a new Organization
     Then I validate the response has status code 200
     Then I save the request endpoint for deleting
     Then Response body should match with "src/test/resources/schemas/trello/organizations/01CreateANewOrganization.json" json schema
+    And I validate the response contains:
+        | displayName  | My team            |
+        | teamType     | sales              |
+        | desc         | My team description|
 
   @regression
   Scenario Outline: Validate organization displayName field
