@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.apache.commons.lang3.StringUtils;
 import org.fundacionjala.api.client.RequestManager;
 import org.fundacionjala.api.config.JsonHelper;
 import org.fundacionjala.api.utils.AllureUtils;
@@ -14,6 +15,8 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 
 import java.io.File;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
@@ -101,9 +104,26 @@ public class RequestSteps {
         }
     }
 
+
     @Then("Response body should match with {string} json schema")
     public void responseBodyShouldMatchWithJsonSchema(final String pathSchema) {
         File schemaFile = new File(pathSchema);
         response.then().assertThat().body(matchesJsonSchema(schemaFile));
+    }
+
+
+    @Then("I validate response contain:")
+    public void iValidateTheResponseContain(final Map<String, String> validationMap) {
+        Response response = (Response) context.get("LAST_RESPONSE");
+        List responseList = response.jsonPath().getList(".");
+
+        for (Map.Entry<String, String> data : validationMap.entrySet()) {
+            for (int i = 0; i < responseList.size(); i++) {
+                String value = (String) ((LinkedHashMap) responseList.get(i)).get(data.getKey());
+                if (!value.isEmpty()) {
+                    Assert.assertEquals(value, StringUtils.lowerCase(data.getValue()));
+                }
+            }
+        }
     }
 }

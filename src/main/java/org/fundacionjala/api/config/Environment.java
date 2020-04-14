@@ -6,7 +6,7 @@ import org.json.simple.JSONObject;
 
 public final class Environment {
 
-    private static final String CONFIG_JSON_PATH = "config.json";
+    private static final String CONFIG_JSON_PATH = "config.json.dist";
     private static Environment instance = new Environment();
 
     private DocumentContext jsonContext;

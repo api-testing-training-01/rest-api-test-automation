@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "kind": {
+      "type": "string"
+    },
+    "error": {
+      "type": "string"
+    },
+    "general_problem": {
+      "type": "string"
+    },
+    "validation_errors": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "field": {
+              "type": "string"
+            },
+            "problem": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "field",
+            "problem"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "code",
+    "kind",
+    "error",
+    "general_problem",
+    "validation_errors"
+  ]
+}
