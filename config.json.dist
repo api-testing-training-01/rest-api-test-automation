@@ -23,5 +23,17 @@
         "token": ""
       }
     }
+  },
+  "sfdc": {
+    "baseUri": "/services/data/v48.0/sobjects",
+    "credentials": {
+      "owner": {
+        "clientId": "",
+        "clientSecret": "",
+        "securityToken": "",
+        "userName": "",
+        "password": "",
+      }
+    }
   }
 }
