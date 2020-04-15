@@ -1,3 +1,4 @@
+@allPivotalProject
 Feature: Projects
 
   @cleanData  @acceptance

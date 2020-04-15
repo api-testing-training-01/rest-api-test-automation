@@ -1,3 +1,4 @@
+@allPivotalProject
 Feature: Projects
 
   @cleanData @acceptance
@@ -89,6 +90,7 @@ Feature: Projects
     }
     """
     Then I validate the response has status code 200
+    And I save the response as "PostResponse"
     And I send a "POST" request to "/projects" with json body
     """
     {
@@ -101,6 +103,7 @@ Feature: Projects
       | kind             | error                                                        |
       | error            | One or more request parameters was missing or invalid.       |
       | general_problem  | The project name you entered is already taken.               |
+    Then I send a "DELETE" request to "/projects/{PostResponse.id}"
 
   @cleanData @acceptance
   Scenario: Pivotal POST Create Project with limit name
