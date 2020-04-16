@@ -30,7 +30,7 @@ Feature: Get Label
     And I save the request endpoint for deleting
     Then I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/pivotal/labels/getLabelSchema.json" json schema
-    And I validate the response contains:
+    And I validate the response contains, ignoring lower and upper case:
       | name | My auto label |
 
   @negative @regression
@@ -49,7 +49,7 @@ Feature: Get Label
       And I save the request endpoint for deleting
     Then I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/pivotal/labels/getLabelsSchema.json" json schema
-    And I validate responses contain:
+    And I validate responses contain, ignoring upper and lower case:
       | name | My auto label |
 
   @negative @regression

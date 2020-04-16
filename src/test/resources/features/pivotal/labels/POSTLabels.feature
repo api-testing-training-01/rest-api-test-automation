@@ -27,7 +27,7 @@ Feature: Labels
     And I save the request endpoint for deleting
     Then I validate the response has status code 200
       And Response body should match with "src/test/resources/schemas/pivotal/labels/postLabelSchema.json" json schema
-      And I validate the response contains:
+      And I validate the response contains, ignoring lower and upper case:
         | name | My first label XXVI |
         | kind | label               |
 

@@ -35,7 +35,7 @@ Feature: Put Label
     Then I validate the response has status code 200
     And I save the request endpoint for deleting
     And Response body should match with "src/test/resources/schemas/pivotal/labels/putLabelSchema.json" json schema
-    And I validate the response contains:
+    And I validate the response contains, ignoring lower and upper case:
       | name | My auto label modified |
 
 

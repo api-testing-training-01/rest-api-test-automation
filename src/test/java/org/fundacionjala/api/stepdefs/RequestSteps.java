@@ -99,7 +99,18 @@ public class RequestSteps {
         Map<String, Object> responseMap = response.jsonPath().getMap(".");
         for (Map.Entry<String, String> data : validationMap.entrySet()) {
             if (responseMap.containsKey(data.getKey())) {
-                Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())),
+                Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
+            }
+        }
+    }
+
+    @Then("I validate the response contains, ignoring lower and upper case:")
+    public void iValidateTheResponseContainsIgnoringLowerUpperCase(final Map<String, String> validationMap) {
+        Map<String, Object> responseMap = response.jsonPath().getMap(".");
+        for (Map.Entry<String, String> data : validationMap.entrySet()) {
+            if (responseMap.containsKey(data.getKey())) {
+                String actual = String.valueOf(responseMap.get(data.getKey()));
+                Assert.assertEquals(StringUtils.lowerCase(actual),
                                     StringUtils.lowerCase(data.getValue()));
             }
         }
