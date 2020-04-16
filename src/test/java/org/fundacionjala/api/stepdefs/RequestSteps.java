@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.apache.commons.lang3.StringUtils;
 import org.fundacionjala.api.client.RequestManager;
 import org.fundacionjala.api.config.JsonHelper;
 import org.fundacionjala.api.utils.AllureUtils;
@@ -14,6 +15,8 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 
 import java.io.File;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
@@ -105,11 +108,63 @@ public class RequestSteps {
         }
     }
 
+    @Then("I validate the response contains, ignoring lower and upper case:")
+    public void iValidateTheResponseContainsIgnoringLowerUpperCase(final Map<String, String> validationMap) {
+        Map<String, Object> responseMap = response.jsonPath().getMap(".");
+        for (Map.Entry<String, String> data : validationMap.entrySet()) {
+            if (responseMap.containsKey(data.getKey())) {
+                String actual = String.valueOf(responseMap.get(data.getKey()));
+                Assert.assertEquals(StringUtils.lowerCase(actual),
+                                    StringUtils.lowerCase(data.getValue()));
+            }
+        }
+    }
+
     @Then("Response body should match with {string} json schema")
     public void responseBodyShouldMatchWithJsonSchema(final String pathSchema) {
         if (OK_STATUS_CODE == response.statusCode()) {
             File schemaFile = new File(pathSchema);
             response.then().assertThat().body(matchesJsonSchema(schemaFile));
+        }
+    }
+
+    @Then("I validate the response should not contain:")
+    public void iValidateTheResponseShouldNotContains(final Map<String, String> validationMap) {
+        Map<String, Object> responseMap = response.jsonPath().getMap(".");
+        for (Map.Entry<String, String> data : validationMap.entrySet()) {
+            if (responseMap.containsKey(data.getKey())) {
+                Assert.assertNotEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
+            }
+        }
+    }
+
+    @Then("I validate responses contain:")
+    public void iValidateTheResponseLabelContains(final Map<String, String> validationMap) {
+        Response response = (Response) context.get("LAST_RESPONSE");
+        List responseList = response.jsonPath().getList(".");
+
+        for (Map.Entry<String, String> data : validationMap.entrySet()) {
+            for (int i = 0; i < responseList.size(); i++) {
+                String value = (String) ((LinkedHashMap) responseList.get(i)).get(data.getKey());
+                if (!value.isEmpty()) {
+                    Assert.assertEquals(value, StringUtils.lowerCase(data.getValue()));
+                }
+            }
+        }
+    }
+
+    @Then("I validate responses contain, should not be:")
+    public void iValidateTheResponseLabelContainsShouldNotBe(final Map<String, String> validationMap) {
+        Response response = (Response) context.get("LAST_RESPONSE");
+        List responseList = response.jsonPath().getList(".");
+
+        for (Map.Entry<String, String> data : validationMap.entrySet()) {
+            for (int i = 0; i < responseList.size(); i++) {
+                String value = (String) ((LinkedHashMap) responseList.get(i)).get(data.getKey());
+                if (!value.isEmpty()) {
+                    Assert.assertNotEquals(value, StringUtils.lowerCase(data.getValue()));
+                }
+            }
         }
     }
 }
