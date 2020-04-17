@@ -139,8 +139,8 @@ public class RequestSteps {
 
     @Then("I validate responses contain:")
     public void iValidateTheResponseLabelContains(final Map<String, String> validationMap) {
-        Response response = (Response) context.get("LAST_RESPONSE");
-        List<Object> responseList = response.jsonPath().getList(".");
+        Response res = (Response) context.get("LAST_RESPONSE");
+        List<Object> responseList = res.jsonPath().getList(".");
 
         for (Map.Entry<String, String> data : validationMap.entrySet()) {
             for (Object o : responseList) {
@@ -154,8 +154,8 @@ public class RequestSteps {
 
     @Then("I validate responses contain, should not be:")
     public void iValidateTheResponseLabelContainsShouldNotBe(final Map<String, String> validationMap) {
-        Response response = (Response) context.get("LAST_RESPONSE");
-        List<Object> responseList = response.jsonPath().getList(".");
+        Response res = (Response) context.get("LAST_RESPONSE");
+        List<Object> responseList = res.jsonPath().getList(".");
 
         for (Map.Entry<String, String> data : validationMap.entrySet()) {
             for (Object o : responseList) {

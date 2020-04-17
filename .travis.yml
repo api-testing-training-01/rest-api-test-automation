@@ -12,7 +12,7 @@ addons:
 script:
   - ./gradlew check
   - sonar-scanner
-  - ./gradlew executeBDDTests
+  - ./gradlew executeBDDTests -PcucumberOptions="--tags @acceptance"
 
 notifications:
   email: true
