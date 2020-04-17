@@ -1,0 +1,19 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "success",
+    "errors"
+  ],
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "success": {
+      "type": "boolean"
+    },
+    "errors": {
+      "type": "array"
+    }
+  }
+}
