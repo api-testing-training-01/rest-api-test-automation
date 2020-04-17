@@ -1,0 +1,47 @@
+{
+    "type": "object",
+    "description": "The root schema comprises the entire JSON document.",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+         "members": {
+            "$id": "#/properties/members",
+            "type": ["array", "null", "string"],
+            "title": "The Members Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "items": {
+                "$id": "#/properties/members/items",
+                "type": "object",
+                "required": [
+                    "id",
+                    "fullName"
+                ],
+                "properties": {
+                    "id": {
+                        "$id": "#/properties/members/items/properties/id",
+                        "type": "string",
+                        "title": "The Id Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "5a8af29038b406641e6adf75"
+                        ]
+                    },
+                    "fullName": {
+                        "$id": "#/properties/members/items/properties/fullName",
+                        "type": "string",
+                        "title": "The Fullname Schema",
+                        "description": "An explanation about the purpose of this instance.",
+                        "default": "",
+                        "examples": [
+                            "Alejandra Neolopan"
+                        ]
+                    }
+
+                }
+            }
+        }
+    }
+}

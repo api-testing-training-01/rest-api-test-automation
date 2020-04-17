@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "required": [
+    "id",
+    "idMember",
+    "memberType",
+    "unconfirmed",
+    "deactivated"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e93cbd1e6b42d755e8b0131"
+      ]
+    },
+    "idMember": {
+      "$id": "#/properties/idMember",
+      "type": "string",
+      "title": "The Idmember Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e6edbbb25fbd021ce639b91"
+      ]
+    },
+    "memberType": {
+      "$id": "#/properties/memberType",
+      "type": "string",
+      "title": "The Membertype Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "admin"
+      ]
+    },
+    "unconfirmed": {
+      "$id": "#/properties/unconfirmed",
+      "type": "boolean",
+      "title": "The Unconfirmed Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "deactivated": {
+      "$id": "#/properties/deactivated",
+      "type": "boolean",
+      "title": "The Deactivated Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    }
+  }
+}
