@@ -2,6 +2,8 @@ package org.fundacionjala.api.config;
 
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.json.simple.JSONObject;
 
 import java.io.FileInputStream;
@@ -12,6 +14,7 @@ import java.util.Properties;
 
 public final class Environment {
 
+    private static final Logger LOGGER = LogManager.getLogger(Environment.class.getName());
     private static final String CONFIG_JSON_PATH = "config.json";
     private static final String PROP_PATH = "gradle.properties";
     private static final String THREAD_COUNT_VAR_NAME = "cucumberThreadCount";
@@ -27,7 +30,8 @@ public final class Environment {
             gradleProp = new Properties();
             gradleProp.load(prop);
         } catch (IOException e) {
-            e.printStackTrace();
+            LOGGER.error("Cannot read gradle.properties file");
+            LOGGER.error(e.getMessage());
         }
     }
 
