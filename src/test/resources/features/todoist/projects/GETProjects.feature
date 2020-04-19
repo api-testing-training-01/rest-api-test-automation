@@ -13,7 +13,6 @@ Feature: Todoist Projects
     Then I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/todoist/getSchema.json" json schema
     And I validate the response contains:
-      | kind             | project    |
       | name             | Test_FV_02 |
 
   @cleanData @acceptance
