@@ -6,12 +6,14 @@ import org.json.simple.JSONObject;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.Properties;
 
 public final class Environment {
 
     private static final String CONFIG_JSON_PATH = "config.json";
-    private static final String GRADLE_PROP_PATH = "gradle.properties";
+    private static final String PROP_PATH = "gradle.properties";
     private static final String THREAD_COUNT_VAR_NAME = "cucumberThreadCount";
     private static Environment instance = new Environment();
 
@@ -21,10 +23,9 @@ public final class Environment {
     private Environment() {
         JSONObject jsonObject = JsonHelper.getJsonObject(CONFIG_JSON_PATH);
         jsonContext = JsonPath.parse(jsonObject);
-        try {
-            FileInputStream fileInputStream = new FileInputStream(GRADLE_PROP_PATH);
+        try (InputStreamReader prop = new InputStreamReader(new FileInputStream(PROP_PATH), StandardCharsets.UTF_8)) {
             gradleProp = new Properties();
-            gradleProp.load(fileInputStream);
+            gradleProp.load(prop);
         } catch (IOException e) {
             e.printStackTrace();
         }
