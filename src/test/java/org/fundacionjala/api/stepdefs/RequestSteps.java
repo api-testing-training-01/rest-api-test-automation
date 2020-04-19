@@ -25,6 +25,7 @@ public class RequestSteps {
     private Response response;
     private Helper context;
     private static final int OK_STATUS_CODE = 200;
+    private static final int OK_STATUS_CODE_201 = 201;
 
 
     public RequestSteps(final Helper context) {
@@ -83,7 +84,7 @@ public class RequestSteps {
 
     @When("I save the request endpoint for deleting")
     public void iSaveTheRequestEndpointForDeleting() {
-        if (response.getStatusCode() == OK_STATUS_CODE) {
+        if (response.getStatusCode() == OK_STATUS_CODE || response.getStatusCode() == OK_STATUS_CODE_201) {
             String lastEndpoint = (String) context.get("LAST_ENDPOINT");
             String lastResponseId = ((Response) context.get("LAST_RESPONSE")).jsonPath().getString("id");
             String finalEndpoint = String.format("%s/%s", lastEndpoint, lastResponseId);
@@ -95,6 +96,12 @@ public class RequestSteps {
     public void iValidateTheResponseHasStatusCode(int expectedStatusCode) {
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, expectedStatusCode);
+    }
+
+    @Then("I validate the response has no to be status code {int}")
+    public void iValidateTheResponseHasNotoHaveStatusCode(int expectedStatusCode) {
+        int statusCode = response.getStatusCode();
+        Assert.assertNotEquals(statusCode, expectedStatusCode);
     }
 
     @Then("I validate the response contains:")
