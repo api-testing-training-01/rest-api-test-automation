@@ -100,8 +100,9 @@ public class RequestSteps {
     @Then("I validate the response contains:")
     public void iValidateTheResponseContains(final Map<String, String> validationMap) {
         Map<String, Object> responseMap = response.jsonPath().getMap(".");
-        for (Map.Entry<String, String> data : validationMap.entrySet()) {
-            if (responseMap.containsKey(data.getKey())) {
+        Map<String, String> entryProcessed = Mapper.replaceBodyData(context.getData(), validationMap);
+        for (Map.Entry<String, String> data : entryProcessed.entrySet()) {
+            if (entryProcessed.containsKey(data.getKey())) {
                 Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
             }
         }
