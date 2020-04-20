@@ -11,6 +11,7 @@ import org.fundacionjala.api.config.JsonHelper;
 import org.fundacionjala.api.utils.AllureUtils;
 import org.fundacionjala.api.utils.Helper;
 import org.fundacionjala.api.utils.Mapper;
+import org.fundacionjala.api.utils.StatusCodeValidator;
 import org.json.simple.JSONObject;
 import org.testng.Assert;
 
@@ -25,7 +26,6 @@ public class RequestSteps {
     private Response response;
     private Helper context;
     private static final int OK_STATUS_CODE = 200;
-
 
     public RequestSteps(final Helper context) {
         this.context = context;
@@ -83,7 +83,8 @@ public class RequestSteps {
 
     @When("I save the request endpoint for deleting")
     public void iSaveTheRequestEndpointForDeleting() {
-        if (response.getStatusCode() == OK_STATUS_CODE) {
+        StatusCodeValidator validate = new StatusCodeValidator();
+        if (validate.codeIsValid(response.getStatusCode())) {
             String lastEndpoint = (String) context.get("LAST_ENDPOINT");
             String lastResponseId = ((Response) context.get("LAST_RESPONSE")).jsonPath().getString("id");
             String finalEndpoint = String.format("%s/%s", lastEndpoint, lastResponseId);
@@ -103,7 +104,8 @@ public class RequestSteps {
         Map<String, String> entryProcessed = Mapper.replaceBodyData(context.getData(), validationMap);
         for (Map.Entry<String, String> data : entryProcessed.entrySet()) {
             if (entryProcessed.containsKey(data.getKey())) {
-                Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
+                Assert.assertEquals(String.valueOf(entryProcessed.get(data.getKey())),
+                        String.valueOf(responseMap.get(data.getKey())));
             }
         }
     }
