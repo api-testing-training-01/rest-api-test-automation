@@ -9,7 +9,7 @@
 #        }
 #        """
 #      And I save the response as "P"
-#
+#  @cleanData
 #  Scenario: Trello PUT Board
 #    When I send a "PUT" request to "/boards/{P.id}" with json body
 #      """

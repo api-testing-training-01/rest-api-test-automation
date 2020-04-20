@@ -15,7 +15,7 @@ import java.util.Properties;
 public final class Environment {
 
     private static final Logger LOGGER = LogManager.getLogger(Environment.class.getName());
-    private static final String CONFIG_JSON_PATH = "config.json";
+    private static final String CONFIG_JSON_PATH = "config.json.dist";
     private static final String PROP_PATH = "gradle.properties";
     private static final String THREAD_COUNT_VAR_NAME = "cucumberThreadCount";
     private static Environment instance = new Environment();

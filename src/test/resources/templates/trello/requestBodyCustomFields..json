@@ -1,0 +1,7 @@
+{
+  "idModel": "{P.id}",
+  "modelType": "board",
+  "name": "My Dropdown",
+  "pos": "bottom",
+  "type": "list"
+}

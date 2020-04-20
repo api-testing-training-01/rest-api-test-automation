@@ -1,0 +1,84 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "idModel": {
+      "type": "string"
+    },
+    "modelType": {
+      "type": "string"
+    },
+    "fieldGroup": {
+      "type": "string"
+    },
+    "display": {
+      "type": "object",
+      "properties": {
+        "cardFront": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "cardFront"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "pos": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string"
+    },
+    "limits": {
+      "type": "object",
+      "properties": {
+        "customFieldOptions": {
+          "type": "object",
+          "properties": {
+            "perField": {
+              "type": "object",
+              "properties": {
+                "status": {
+                  "type": "string"
+                },
+                "disableAt": {
+                  "type": "integer"
+                },
+                "warnAt": {
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "status",
+                "disableAt",
+                "warnAt"
+              ]
+            }
+          },
+          "required": [
+            "perField"
+          ]
+        }
+      },
+      "required": [
+        "customFieldOptions"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "idModel",
+    "modelType",
+    "fieldGroup",
+    "display",
+    "name",
+    "pos",
+    "type",
+    "limits"
+  ]
+}
