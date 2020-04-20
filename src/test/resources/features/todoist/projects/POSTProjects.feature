@@ -9,7 +9,6 @@ Feature: Todoist Projects
     Then I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/todoist/postSchema.json" json schema
     And I validate the response contains:
-      | kind             | project    |
       | name             | Test_FV_02 |
 
   @cleanData @negative
@@ -21,7 +20,6 @@ Feature: Todoist Projects
     Then I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/todoist/postSchema.json" json schema
     And I validate the response contains:
-      | kind             | project    |
       | name             | Test_FV_03_____-_____$ |
 
 
@@ -33,7 +31,6 @@ Feature: Todoist Projects
     And I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/todoist/postSchema.json" json schema
     And I validate the response contains:
-      | kind             | project    |
       | name             | Test_FV_02 |
     And I send a "GET" request to "/projects/{LAST_RESPONSE.id}"
     And I validate the response has status code 200

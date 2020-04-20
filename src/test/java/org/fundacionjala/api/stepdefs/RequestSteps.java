@@ -15,7 +15,6 @@ import org.json.simple.JSONObject;
 import org.testng.Assert;
 
 import java.io.File;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -101,8 +100,9 @@ public class RequestSteps {
     @Then("I validate the response contains:")
     public void iValidateTheResponseContains(final Map<String, String> validationMap) {
         Map<String, Object> responseMap = response.jsonPath().getMap(".");
-        for (Map.Entry<String, String> data : validationMap.entrySet()) {
-            if (responseMap.containsKey(data.getKey())) {
+        Map<String, String> entryProcessed = Mapper.replaceBodyData(context.getData(), validationMap);
+        for (Map.Entry<String, String> data : entryProcessed.entrySet()) {
+            if (entryProcessed.containsKey(data.getKey())) {
                 Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
             }
         }
@@ -115,7 +115,7 @@ public class RequestSteps {
             if (responseMap.containsKey(data.getKey())) {
                 String actual = String.valueOf(responseMap.get(data.getKey()));
                 Assert.assertEquals(StringUtils.lowerCase(actual),
-                                    StringUtils.lowerCase(data.getValue()));
+                        StringUtils.lowerCase(data.getValue()));
             }
         }
     }
@@ -140,12 +140,12 @@ public class RequestSteps {
 
     @Then("I validate responses contain:")
     public void iValidateTheResponseLabelContains(final Map<String, String> validationMap) {
-        Response response = (Response) context.get("LAST_RESPONSE");
-        List responseList = response.jsonPath().getList(".");
+        Response res = (Response) context.get("LAST_RESPONSE");
+        List<Object> responseList = res.jsonPath().getList(".");
 
         for (Map.Entry<String, String> data : validationMap.entrySet()) {
-            for (int i = 0; i < responseList.size(); i++) {
-                String value = (String) ((LinkedHashMap) responseList.get(i)).get(data.getKey());
+            for (Object o : responseList) {
+                String value = (String) ((Map) o).get(data.getKey());
                 if (!value.isEmpty()) {
                     Assert.assertEquals(value, StringUtils.lowerCase(data.getValue()));
                 }
@@ -155,12 +155,12 @@ public class RequestSteps {
 
     @Then("I validate responses contain, should not be:")
     public void iValidateTheResponseLabelContainsShouldNotBe(final Map<String, String> validationMap) {
-        Response response = (Response) context.get("LAST_RESPONSE");
-        List responseList = response.jsonPath().getList(".");
+        Response res = (Response) context.get("LAST_RESPONSE");
+        List<Object> responseList = res.jsonPath().getList(".");
 
         for (Map.Entry<String, String> data : validationMap.entrySet()) {
-            for (int i = 0; i < responseList.size(); i++) {
-                String value = (String) ((LinkedHashMap) responseList.get(i)).get(data.getKey());
+            for (Object o : responseList) {
+                String value = (String) ((Map) o).get(data.getKey());
                 if (!value.isEmpty()) {
                     Assert.assertNotEquals(value, StringUtils.lowerCase(data.getValue()));
                 }
