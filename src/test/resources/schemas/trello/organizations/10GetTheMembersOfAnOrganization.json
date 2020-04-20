@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "fullName": "Alex Garcia",
+        "id": "5e6edbbb25fbd021ce639b91",
+        "username": "alexgarcia289"
+      }
+    ],
+    "required": [
+      "id",
+      "username",
+      "fullName"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "string",
+        "title": "The Id Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "5e6edbbb25fbd021ce639b91"
+        ]
+      },
+      "username": {
+        "$id": "#/items/properties/username",
+        "type": "string",
+        "title": "The Username Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "alexgarcia289"
+        ]
+      },
+      "fullName": {
+        "$id": "#/items/properties/fullName",
+        "type": "string",
+        "title": "The Fullname Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Alex Garcia"
+        ]
+      }
+    }
+  }
+}

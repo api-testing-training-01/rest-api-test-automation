@@ -1,0 +1,293 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "id": "5e93c50fc6b710334d9e78b1",
+        "data": {
+          "organization": {
+            "name": "Team00078",
+            "id": "5e93c50fc6b710334d9e78af"
+          }
+        },
+        "memberCreator": {
+          "initials": "AG",
+          "id": "5e6edbbb25fbd021ce639b91",
+          "activityBlocked": false,
+          "nonPublicAvailable": false,
+          "idMemberReferrer": null,
+          "fullName": "Alex Garcia",
+          "avatarUrl": null,
+          "nonPublic": {},
+          "avatarHash": null,
+          "username": "alexgarcia289"
+        },
+        "limits": {},
+        "date": "2020-04-13T01:49:03.755Z",
+        "idMemberCreator": "5e6edbbb25fbd021ce639b91",
+        "type": "createOrganization"
+      }
+    ],
+    "required": [
+      "id",
+      "idMemberCreator",
+      "data",
+      "type",
+      "date",
+      "limits",
+      "memberCreator"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "string",
+        "title": "The Id Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "5e93c50fc6b710334d9e78b1"
+        ]
+      },
+      "idMemberCreator": {
+        "$id": "#/items/properties/idMemberCreator",
+        "type": "string",
+        "title": "The Idmembercreator Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "5e6edbbb25fbd021ce639b91"
+        ]
+      },
+      "data": {
+        "$id": "#/items/properties/data",
+        "type": "object",
+        "title": "The Data Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "organization": {
+              "name": "Team00078",
+              "id": "5e93c50fc6b710334d9e78af"
+            }
+          }
+        ],
+        "required": [
+          "organization"
+        ],
+        "properties": {
+          "organization": {
+            "$id": "#/items/properties/data/properties/organization",
+            "type": "object",
+            "title": "The Organization Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {
+                "name": "Team00078",
+                "id": "5e93c50fc6b710334d9e78af"
+              }
+            ],
+            "required": [
+              "id",
+              "name"
+            ],
+            "properties": {
+              "id": {
+                "$id": "#/items/properties/data/properties/organization/properties/id",
+                "type": "string",
+                "title": "The Id Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "5e93c50fc6b710334d9e78af"
+                ]
+              },
+              "name": {
+                "$id": "#/items/properties/data/properties/organization/properties/name",
+                "type": "string",
+                "title": "The Name Schema",
+                "description": "An explanation about the purpose of this instance.",
+                "default": "",
+                "examples": [
+                  "Team00078"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "type": {
+        "$id": "#/items/properties/type",
+        "type": "string",
+        "title": "The Type Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "createOrganization"
+        ]
+      },
+      "date": {
+        "$id": "#/items/properties/date",
+        "type": "string",
+        "title": "The Date Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "2020-04-13T01:49:03.755Z"
+        ]
+      },
+      "limits": {
+        "$id": "#/items/properties/limits",
+        "type": "object",
+        "title": "The Limits Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {}
+        ]
+      },
+      "memberCreator": {
+        "$id": "#/items/properties/memberCreator",
+        "type": "object",
+        "title": "The Membercreator Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "fullName": "Alex Garcia",
+            "avatarUrl": null,
+            "nonPublic": {},
+            "avatarHash": null,
+            "username": "alexgarcia289",
+            "initials": "AG",
+            "id": "5e6edbbb25fbd021ce639b91",
+            "activityBlocked": false,
+            "nonPublicAvailable": false,
+            "idMemberReferrer": null
+          }
+        ],
+        "required": [
+          "id",
+          "username",
+          "activityBlocked",
+          "avatarHash",
+          "avatarUrl",
+          "fullName",
+          "idMemberReferrer",
+          "initials",
+          "nonPublic",
+          "nonPublicAvailable"
+        ],
+        "properties": {
+          "id": {
+            "$id": "#/items/properties/memberCreator/properties/id",
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "5e6edbbb25fbd021ce639b91"
+            ]
+          },
+          "username": {
+            "$id": "#/items/properties/memberCreator/properties/username",
+            "type": "string",
+            "title": "The Username Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "alexgarcia289"
+            ]
+          },
+          "activityBlocked": {
+            "$id": "#/items/properties/memberCreator/properties/activityBlocked",
+            "type": "boolean",
+            "title": "The Activityblocked Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "avatarHash": {
+            "$id": "#/items/properties/memberCreator/properties/avatarHash",
+            "title": "The Avatarhash Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "avatarUrl": {
+            "$id": "#/items/properties/memberCreator/properties/avatarUrl",
+            "title": "The Avatarurl Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "fullName": {
+            "$id": "#/items/properties/memberCreator/properties/fullName",
+            "type": "string",
+            "title": "The Fullname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Alex Garcia"
+            ]
+          },
+          "idMemberReferrer": {
+            "$id": "#/items/properties/memberCreator/properties/idMemberReferrer",
+            "title": "The Idmemberreferrer Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "initials": {
+            "$id": "#/items/properties/memberCreator/properties/initials",
+            "type": "string",
+            "title": "The Initials Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "AG"
+            ]
+          },
+          "nonPublic": {
+            "$id": "#/items/properties/memberCreator/properties/nonPublic",
+            "type": "object",
+            "title": "The Nonpublic Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+              {}
+            ]
+          },
+          "nonPublicAvailable": {
+            "$id": "#/items/properties/memberCreator/properties/nonPublicAvailable",
+            "type": "boolean",
+            "title": "The Nonpublicavailable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+              false
+            ]
+          }
+        }
+      }
+    }
+  }
+}
