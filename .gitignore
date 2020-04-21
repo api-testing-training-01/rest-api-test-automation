@@ -6,4 +6,5 @@
 *.iml
 /allure-results/
 /java/
+/logs/
 config.json
