@@ -14,7 +14,7 @@ Feature: Get Lead
     Then I validate the response has status code 201
     And I save the response as "Lead"
 
-  @cleanDatagra @acceptance @sfdcLead
+  @cleanData @acceptance @sfdcLead
   Scenario: Get a Lead
     Given I use the "sfdc" service and the "owner" account
     When I send a "GET" request to "/Lead/{Lead.id}"
