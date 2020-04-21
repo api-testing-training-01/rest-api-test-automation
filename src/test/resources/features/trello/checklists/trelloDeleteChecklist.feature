@@ -26,7 +26,7 @@ Feature: Checklist
     """
     And I save the response as "C"
     When I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"

@@ -47,7 +47,7 @@ Feature: Checklist
     """
     And I save the response as "C"
     And I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"
@@ -91,7 +91,7 @@ Feature: Checklist
     """
     And I save the response as "C"
     And I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"
@@ -111,7 +111,7 @@ Feature: Checklist
     """
     And I save the response as "C"
     And I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"

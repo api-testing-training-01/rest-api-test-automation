@@ -27,7 +27,7 @@ Background:
     """
     And I save the response as "C"
     When I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"
@@ -50,7 +50,7 @@ Background:
     """
     And I save the response as "C"
     When I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"
@@ -87,7 +87,7 @@ Background:
     """
     And I save the response as "C"
     And I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
 
       """
     And I save the response as "CL"

@@ -16,7 +16,7 @@ Feature: Checklist
 
 #Update a Checklist
   @acceptance @cleanData @checklists
-  Scenario: Trello PUT update a checklist name on Card of TO DO List
+  Scenario Outline: Trello PUT update a checklist name and pos on Card of TO DO List
     Given I send a "POST" request to "/cards?idList={L.[0].id}" with json body
     """
     {
@@ -26,7 +26,11 @@ Feature: Checklist
     """
     And I save the response as "C"
     And I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
+      """
+
+      """
+    And I send a "POST" request to "/checklists?idCard={C.id}" with json body
+      """
 
       """
     And I save the response as "CL"
@@ -34,11 +38,16 @@ Feature: Checklist
     When I send a "PUT" request to "/checklists/{CL.id}" with json body
       """
       {
-      "name": "checklists updated by cucumber"
+      <field>: <value>
       }
       """
     Then I validate the response has status code 200
-
+    And Response body should match with "src/test/resources/schemas/trello/checklists/putChecklist.json" json schema
+    Examples:
+      |field    |value                |
+      | "name"  | "checklists updated"|
+      |  "pos"  |   20                |
+      |  "pos"  | "top"               |
 
        #Update field on a Checklist
   @acceptance @cleanData @checklists
@@ -70,28 +79,28 @@ Feature: Checklist
       |  pos|   20                |
 
          #Update Checkitem on Card
-  @acceptance @cleanData @checklists
-  Scenario: Trello PUT Update Checkitem on a Checklist for Card of DONE List
-    Given I send a "POST" request to "/cards?idList={L.[2].id}" with json body
-    """
-    {
-    "name": "Card1 on Done",
-    "desc": "Description for Card1 on Done"
-    }
-    """
-    And I save the response as "C"
-    And I send a "POST" request to "/checklists?idCard={C.id}" with json body
-       """
-      "name": "Checklist"
-      """
-    And I save the response as "CL"
-    And I send a "POST" request to "/checklists/{CL.id}/checkItems" with json body
-   """
-    {
-    "name": "Checkitem on Checklist"
-    }
-    """
-    And I save the response as "CI"
-    When I send a "PUT" request to "/checklists/{CL.id}/checkItems/{CI.id}" with datatable
-     |pos|20|
-    Then I validate the response has status code 200
+#  @acceptance @cleanData @checklists
+#  Scenario: Trello PUT Update Checkitem on a Checklist for Card of DONE List
+#    Given I send a "POST" request to "/cards?idList={L.[2].id}" with json body
+#    """
+#    {
+#    "name": "Card1 on Done",
+#    "desc": "Description for Card1 on Done"
+#    }
+#    """
+#    And I save the response as "C"
+#    And I send a "POST" request to "/checklists?idCard={C.id}" with json body
+#       """
+#      "name": "Checklist"
+#      """
+#    And I save the response as "CL"
+#    And I send a "POST" request to "/checklists/{CL.id}/checkItems" with json body
+#   """
+#    {
+#    "name": "Checkitem on Checklist"
+#    }
+#    """
+#    And I save the response as "CI"
+#    When I send a "PUT" request to "/checklists/{CL.id}/checkItems/{CI.id}" with datatable
+#     |pos|20|
+#    Then I validate the response has status code 200
