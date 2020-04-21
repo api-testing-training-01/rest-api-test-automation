@@ -16,7 +16,6 @@ Background:
 
 #Create a Checklist
   @acceptance @cleanData @checklists
-
   Scenario: Trello POST create a checklist on Card of TO DO List
     Given I send a "POST" request to "/cards?idList={L.[0].id}" with json body
     """
@@ -33,10 +32,6 @@ Background:
     And I save the response as "CL"
     Then I validate the response has status code 200
     And Response body should match with "src/test/resources/schemas/trello/checklists/createChecklist.json" json schema
-    And I validate the response contains:
-      | Id           | {CL.Id}        |
-      | Name         | {CL.Name}      |
-      | pos          | {CL.pos}       |
 
 
   @acceptance @cleanData @checklists
