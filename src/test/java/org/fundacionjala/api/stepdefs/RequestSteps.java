@@ -17,6 +17,7 @@ import org.testng.Assert;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.IntStream;
 
 import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchema;
 
@@ -24,8 +25,7 @@ public class RequestSteps {
 
     private Response response;
     private Helper context;
-    private static final int OK_STATUS_CODE = 200;
-
+    private static final int[] OK_STATUS_CODE = {200, 201, 204};
 
     public RequestSteps(final Helper context) {
         this.context = context;
@@ -83,7 +83,7 @@ public class RequestSteps {
 
     @When("I save the request endpoint for deleting")
     public void iSaveTheRequestEndpointForDeleting() {
-        if (response.getStatusCode() == OK_STATUS_CODE) {
+        if (IntStream.of(OK_STATUS_CODE).anyMatch(n -> n == response.getStatusCode())) {
             String lastEndpoint = (String) context.get("LAST_ENDPOINT");
             String lastResponseId = ((Response) context.get("LAST_RESPONSE")).jsonPath().getString("id");
             String finalEndpoint = String.format("%s/%s", lastEndpoint, lastResponseId);
@@ -99,11 +99,13 @@ public class RequestSteps {
 
     @Then("I validate the response contains:")
     public void iValidateTheResponseContains(final Map<String, String> validationMap) {
-        Map<String, Object> responseMap = response.jsonPath().getMap(".");
-        Map<String, String> entryProcessed = Mapper.replaceBodyData(context.getData(), validationMap);
-        for (Map.Entry<String, String> data : entryProcessed.entrySet()) {
-            if (entryProcessed.containsKey(data.getKey())) {
-                Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
+        if (IntStream.of(OK_STATUS_CODE).anyMatch(n -> n == response.getStatusCode())) {
+            Map<String, Object> responseMap = response.jsonPath().getMap(".");
+            Map<String, String> entryProcessed = Mapper.replaceBodyData(context.getData(), validationMap);
+            for (Map.Entry<String, String> data : entryProcessed.entrySet()) {
+                if (entryProcessed.containsKey(data.getKey())) {
+                    Assert.assertEquals(String.valueOf(responseMap.get(data.getKey())), data.getValue());
+                }
             }
         }
     }
@@ -122,7 +124,7 @@ public class RequestSteps {
 
     @Then("Response body should match with {string} json schema")
     public void responseBodyShouldMatchWithJsonSchema(final String pathSchema) {
-        if (OK_STATUS_CODE == response.statusCode()) {
+        if (IntStream.of(OK_STATUS_CODE).anyMatch(n -> n == response.getStatusCode())) {
             File schemaFile = new File(pathSchema);
             response.then().assertThat().body(matchesJsonSchema(schemaFile));
         }
