@@ -63,7 +63,26 @@ task executeBDDTests(type: Test) {
     options {
         jvmArgs = ['-Dcucumber.options= --glue org.fundacionjala.api ' +
                            '--plugin pretty ' +
+                           '--plugin rerun:build/rerun.txt ' +
                            '--plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm ' + cucumberOptions]
+        jvmArgs = ['-DcucumberThreadCount=' + cucumberThreadCount]
+    }
+    // Flag to show console output.
+    testLogging.showStandardStreams = true
+    // Flag to scan for classes with @Test annotation.
+    scanForTestClasses = false
+    // Calls allure report generation task.
+    finalizedBy 'allureReport'
+}
+
+// Task for re-execute test using command line.
+task reExecuteBDDTests(type: Test) {
+    useTestNG()
+    options {
+        jvmArgs = ['-Dcucumber.options= --glue org.fundacionjala.api ' +
+                           '--plugin pretty ' +
+                           '@build/rerun.txt ' +
+                           '--plugin io.qameta.allure.cucumber4jvm.AllureCucumber4Jvm ']
         jvmArgs = ['-DcucumberThreadCount=' + cucumberThreadCount]
     }
     // Flag to show console output.
