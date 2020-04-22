@@ -173,4 +173,12 @@ public class RequestSteps {
             }
         }
     }
+
+    @Then("I validate the response should not have status code")
+    public void iValidateTheResponseShouldNotHaveStatusCode(final List expectedStatusCode) {
+        int statusCode = response.getStatusCode();
+        for (Object code : expectedStatusCode) {
+            Assert.assertNotEquals(statusCode, Integer.parseInt(code.toString()));
+        }
+    }
 }
