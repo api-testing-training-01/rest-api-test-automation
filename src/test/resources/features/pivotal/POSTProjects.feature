@@ -199,12 +199,12 @@ Feature: Projects
     Then I validate the response has status code 301
 
   @cleanData @acceptance
-  Scenario: Pivotal POST Create project for membership
+    Scenario: Pivotal POST Create project for membership
     Given I use the "pivotal" service and the "owner" account
     When I send a "POST" request to "/projects" with json body
     """
     {
-    "name": "Project created by cucumber by membershipr"
+    "name": "Project created by cucumber by membership"
     }
     """
     Then I validate the response has status code 200
@@ -219,7 +219,5 @@ Feature: Projects
      And I validate the response contains:
       | kind                        | project_membership                     |
       | role                        | member                                 |
-      | person.kind                 | person                                 |
-      | person.email                | testing@testing.testmail               |
     Then I send a "DELETE" request to "/projects/{PostResponse.id}"
     Then I validate the response has status code 204
