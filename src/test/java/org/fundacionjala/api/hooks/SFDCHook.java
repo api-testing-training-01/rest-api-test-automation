@@ -9,7 +9,6 @@ import org.fundacionjala.api.utils.Helper;
 import org.fundacionjala.api.utils.RequestSpecFactory;
 
 public class SFDCHook {
-    private static final int TOO_MANY_REQUESTS_STATUS_CODE = 429;
     private Helper helper;
     private RequestSpecification requestSpecification =
             RequestSpecFactory.getRequestSpec("sfdc", "owner");
