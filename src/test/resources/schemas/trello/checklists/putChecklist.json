@@ -1,0 +1,85 @@
+{
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "name",
+    "idCard",
+    "pos",
+    "idBoard",
+    "checkItems"
+  ],
+  "properties": {
+    "id": {
+      "$id": "#/properties/id",
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9f4600b994d133ff774faa"
+      ]
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Checklist"
+      ]
+    },
+    "idCard": {
+      "$id": "#/properties/idCard",
+      "type": "string",
+      "title": "The Idcard Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9f3b0c97ab408deee422c8"
+      ]
+    },
+    "pos": {
+      "$id": "#/properties/pos",
+      "type": "integer",
+      "title": "The Pos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        8192.0
+      ]
+    },
+    "idBoard": {
+      "$id": "#/properties/idBoard",
+      "type": "string",
+      "title": "The Idboard Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9f3a3b3a5a56681de861c9"
+      ]
+    },
+    "checkItems": {
+      "$id": "#/properties/checkItems",
+      "type": "array",
+      "title": "The Checkitems Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/checkItems/items",
+        "type": "null",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      }
+    }
+  }
+}

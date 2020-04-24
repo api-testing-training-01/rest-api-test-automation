@@ -14,7 +14,7 @@ import java.util.Properties;
 
 public final class Environment {
 
-    private static final Logger LOGGER = LogManager.getLogger(Environment.class.getName());
+    private static final Logger LOGGER = LogManager.getLogger(Environment.class);
     private static final String CONFIG_JSON_PATH = "config.json";
     private static final String PROP_PATH = "gradle.properties";
     private static final String THREAD_COUNT_VAR_NAME = "cucumberThreadCount";
@@ -24,6 +24,7 @@ public final class Environment {
     private DocumentContext jsonContext;
 
     private Environment() {
+        LOGGER.info("Reading config files.");
         JSONObject jsonObject = JsonHelper.getJsonObject(CONFIG_JSON_PATH);
         jsonContext = JsonPath.parse(jsonObject);
         try (InputStreamReader prop = new InputStreamReader(new FileInputStream(PROP_PATH), StandardCharsets.UTF_8)) {
