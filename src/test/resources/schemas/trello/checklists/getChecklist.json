@@ -1,0 +1,183 @@
+{
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "name",
+    "idCard",
+    "pos",
+    "idBoard",
+    "checkItems"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9d9444c04bc93ad88ae388"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Checklist"
+      ]
+    },
+    "idCard": {
+      "type": "string",
+      "title": "The Idcard Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9d941ba3b5df0c4932525b"
+      ]
+    },
+    "pos": {
+      "type": "integer",
+      "title": "The Pos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        16384.0
+      ]
+    },
+    "idBoard": {
+      "type": "string",
+      "title": "The Idboard Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9d93b3f14f0337d62afc50"
+      ]
+    },
+    "checkItems": {
+      "type": "array",
+      "title": "The Checkitems Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        [
+          {
+            "pos": 16384.0,
+            "id": "5e9d976df7e09b3e768aa082",
+            "due": null,
+            "idMember": null,
+            "name": "Checkitem on Checklist",
+            "nameData": null,
+            "idChecklist": "5e9d9444c04bc93ad88ae388",
+            "state": "incomplete"
+          }
+        ]
+      ],
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "examples": [
+          {
+            "pos": 16384.0,
+            "id": "5e9d976df7e09b3e768aa082",
+            "due": null,
+            "name": "Checkitem on Checklist",
+            "idMember": null,
+            "idChecklist": "5e9d9444c04bc93ad88ae388",
+            "nameData": null,
+            "state": "incomplete"
+          }
+        ],
+        "additionalProperties": true,
+        "required": [
+          "idChecklist",
+          "state",
+          "idMember",
+          "id",
+          "name",
+          "nameData",
+          "pos",
+          "due"
+        ],
+        "properties": {
+          "idChecklist": {
+            "type": "string",
+            "title": "The Idchecklist Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "5e9d9444c04bc93ad88ae388"
+            ]
+          },
+          "state": {
+            "type": "string",
+            "title": "The State Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "incomplete"
+            ]
+          },
+          "idMember": {
+            "type": "null",
+            "title": "The Idmember Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "id": {
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "5e9d976df7e09b3e768aa082"
+            ]
+          },
+          "name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+              "Checkitem on Checklist"
+            ]
+          },
+          "nameData": {
+            "type": "null",
+            "title": "The Namedata Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "pos": {
+            "type": "integer",
+            "title": "The Pos Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+              16384.0
+            ]
+          },
+          "due": {
+            "type": "null",
+            "title": "The Due Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+              null
+            ]
+          }
+        }
+      }
+    }
+  }
+}
