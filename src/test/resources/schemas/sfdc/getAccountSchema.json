@@ -1,0 +1,710 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "attributes",
+    "Id",
+    "IsDeleted",
+    "MasterRecordId",
+    "Name",
+    "Type",
+    "ParentId",
+    "BillingStreet",
+    "BillingCity",
+    "BillingState",
+    "BillingPostalCode",
+    "BillingCountry",
+    "BillingLatitude",
+    "BillingLongitude",
+    "BillingGeocodeAccuracy",
+    "BillingAddress",
+    "ShippingStreet",
+    "ShippingCity",
+    "ShippingState",
+    "ShippingPostalCode",
+    "ShippingCountry",
+    "ShippingLatitude",
+    "ShippingLongitude",
+    "ShippingGeocodeAccuracy",
+    "ShippingAddress",
+    "Phone",
+    "Fax",
+    "AccountNumber",
+    "Website",
+    "PhotoUrl",
+    "Sic",
+    "Industry",
+    "AnnualRevenue",
+    "NumberOfEmployees",
+    "Ownership",
+    "TickerSymbol",
+    "Description",
+    "Rating",
+    "Site",
+    "OwnerId",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "LastActivityDate",
+    "LastViewedDate",
+    "LastReferencedDate",
+    "Jigsaw",
+    "JigsawCompanyId",
+    "CleanStatus",
+    "AccountSource",
+    "DunsNumber",
+    "Tradestyle",
+    "NaicsCode",
+    "NaicsDesc",
+    "YearStarted",
+    "SicDesc",
+    "DandbCompanyId",
+    "OperatingHoursId",
+    "CustomerPriority__c",
+    "SLA__c",
+    "Active__c",
+    "NumberofLocations__c",
+    "UpsellOpportunity__c",
+    "SLASerialNumber__c",
+    "SLAExpirationDate__c"
+  ],
+  "properties": {
+    "attributes": {
+      "type": "object",
+      "title": "The Attributes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "url": "/services/data/v48.0/sobjects/Account/0015w000028aTwgAAE",
+          "type": "Account"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "type",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "The Type Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Account"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "title": "The Url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/services/data/v48.0/sobjects/Account/0015w000028aTwgAAE"
+          ]
+        }
+      }
+    },
+    "Id": {
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0015w000028aTwgAAE"
+      ]
+    },
+    "IsDeleted": {
+      "type": "boolean",
+      "title": "The Isdeleted Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "MasterRecordId": {
+      "type": "null",
+      "title": "The Masterrecordid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Account created by cucumber API test With Long Name as parameter to be validated as not valid number of chars returning an error"
+      ]
+    },
+    "Type": {
+      "type": "null",
+      "title": "The Type Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ParentId": {
+      "type": "null",
+      "title": "The Parentid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingStreet": {
+      "type": "null",
+      "title": "The Billingstreet Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingCity": {
+      "type": "null",
+      "title": "The Billingcity Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingState": {
+      "type": "null",
+      "title": "The Billingstate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingPostalCode": {
+      "type": "null",
+      "title": "The Billingpostalcode Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingCountry": {
+      "type": "null",
+      "title": "The Billingcountry Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingLatitude": {
+      "type": "null",
+      "title": "The Billinglatitude Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingLongitude": {
+      "type": "null",
+      "title": "The Billinglongitude Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingGeocodeAccuracy": {
+      "type": "null",
+      "title": "The Billinggeocodeaccuracy Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "BillingAddress": {
+      "type": "null",
+      "title": "The Billingaddress Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingStreet": {
+      "type": "null",
+      "title": "The Shippingstreet Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingCity": {
+      "type": "null",
+      "title": "The Shippingcity Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingState": {
+      "type": "null",
+      "title": "The Shippingstate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingPostalCode": {
+      "type": "null",
+      "title": "The Shippingpostalcode Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingCountry": {
+      "type": "null",
+      "title": "The Shippingcountry Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingLatitude": {
+      "type": "null",
+      "title": "The Shippinglatitude Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingLongitude": {
+      "type": "null",
+      "title": "The Shippinglongitude Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingGeocodeAccuracy": {
+      "type": "null",
+      "title": "The Shippinggeocodeaccuracy Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "ShippingAddress": {
+      "type": "null",
+      "title": "The Shippingaddress Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Phone": {
+      "type": "null",
+      "title": "The Phone Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Fax": {
+      "type": "null",
+      "title": "The Fax Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "AccountNumber": {
+      "type": "null",
+      "title": "The Accountnumber Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Website": {
+      "type": "null",
+      "title": "The Website Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "PhotoUrl": {
+      "type": "string",
+      "title": "The Photourl Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "/services/images/photo/0015w000028aTwgAAE"
+      ]
+    },
+    "Sic": {
+      "type": "null",
+      "title": "The Sic Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Industry": {
+      "type": "null",
+      "title": "The Industry Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "AnnualRevenue": {
+      "type": "null",
+      "title": "The Annualrevenue Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "NumberOfEmployees": {
+      "type": "null",
+      "title": "The Numberofemployees Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Ownership": {
+      "type": "null",
+      "title": "The Ownership Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "TickerSymbol": {
+      "type": "null",
+      "title": "The Tickersymbol Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Description": {
+      "type": "null",
+      "title": "The Description Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Rating": {
+      "type": "null",
+      "title": "The Rating Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Site": {
+      "type": "null",
+      "title": "The Site Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "OwnerId": {
+      "type": "string",
+      "title": "The Ownerid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0055w00000BW8biAAD"
+      ]
+    },
+    "CreatedDate": {
+      "type": "string",
+      "title": "The Createddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:58:26.000+0000"
+      ]
+    },
+    "CreatedById": {
+      "type": "string",
+      "title": "The Createdbyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0055w00000BW8biAAD"
+      ]
+    },
+    "LastModifiedDate": {
+      "type": "string",
+      "title": "The Lastmodifieddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:58:26.000+0000"
+      ]
+    },
+    "LastModifiedById": {
+      "type": "string",
+      "title": "The Lastmodifiedbyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0055w00000BW8biAAD"
+      ]
+    },
+    "SystemModstamp": {
+      "type": "string",
+      "title": "The Systemmodstamp Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:58:26.000+0000"
+      ]
+    },
+    "LastActivityDate": {
+      "type": "null",
+      "title": "The Lastactivitydate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "LastViewedDate": {
+      "type": "string",
+      "title": "The Lastvieweddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:58:26.000+0000"
+      ]
+    },
+    "LastReferencedDate": {
+      "type": "string",
+      "title": "The Lastreferenceddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:58:26.000+0000"
+      ]
+    },
+    "Jigsaw": {
+      "type": "null",
+      "title": "The Jigsaw Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "JigsawCompanyId": {
+      "type": "null",
+      "title": "The Jigsawcompanyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "CleanStatus": {
+      "type": "string",
+      "title": "The Cleanstatus Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Pending"
+      ]
+    },
+    "AccountSource": {
+      "type": "null",
+      "title": "The Accountsource Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "DunsNumber": {
+      "type": "null",
+      "title": "The Dunsnumber Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Tradestyle": {
+      "type": "null",
+      "title": "The Tradestyle Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "NaicsCode": {
+      "type": "null",
+      "title": "The Naicscode Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "NaicsDesc": {
+      "type": "null",
+      "title": "The Naicsdesc Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "YearStarted": {
+      "type": "null",
+      "title": "The Yearstarted Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "SicDesc": {
+      "type": "null",
+      "title": "The Sicdesc Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "DandbCompanyId": {
+      "type": "null",
+      "title": "The Dandbcompanyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "OperatingHoursId": {
+      "type": "null",
+      "title": "The Operatinghoursid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "CustomerPriority__c": {
+      "type": "null",
+      "title": "The Customerpriority__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "SLA__c": {
+      "type": "null",
+      "title": "The Sla__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Active__c": {
+      "type": "null",
+      "title": "The Active__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "NumberofLocations__c": {
+      "type": "null",
+      "title": "The Numberoflocations__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "UpsellOpportunity__c": {
+      "type": "null",
+      "title": "The Upsellopportunity__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "SLASerialNumber__c": {
+      "type": "null",
+      "title": "The Slaserialnumber__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "SLAExpirationDate__c": {
+      "type": "null",
+      "title": "The Slaexpirationdate__c Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    }
+  }
+}

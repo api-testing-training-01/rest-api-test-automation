@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": [],
+  "additionalItems": true,
+  "items": {
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "errorCode": "NOT_FOUND",
+        "message": "Provided external ID field does not exist or is not accessible: 0001"
+      }
+    ],
+    "additionalProperties": true,
+    "required": [
+      "errorCode",
+      "message"
+    ],
+    "properties": {
+      "errorCode": {
+        "type": "string",
+        "title": "The Errorcode Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "NOT_FOUND"
+        ]
+      },
+      "message": {
+        "type": "string",
+        "title": "The Message Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Provided external ID field does not exist or is not accessible: 0001"
+        ]
+      }
+    }
+  }
+}
