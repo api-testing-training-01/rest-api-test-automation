@@ -1,0 +1,417 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "attributes",
+    "Id",
+    "IsDeleted",
+    "Name",
+    "ParentId",
+    "Type",
+    "Status",
+    "StartDate",
+    "EndDate",
+    "ExpectedRevenue",
+    "BudgetedCost",
+    "ActualCost",
+    "ExpectedResponse",
+    "NumberSent",
+    "IsActive",
+    "Description",
+    "NumberOfLeads",
+    "NumberOfConvertedLeads",
+    "NumberOfContacts",
+    "NumberOfResponses",
+    "NumberOfOpportunities",
+    "NumberOfWonOpportunities",
+    "AmountAllOpportunities",
+    "AmountWonOpportunities",
+    "OwnerId",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp",
+    "LastActivityDate",
+    "LastViewedDate",
+    "LastReferencedDate",
+    "CampaignMemberRecordTypeId"
+  ],
+  "properties": {
+    "attributes": {
+      "$id": "#/properties/attributes",
+      "type": "object",
+      "title": "The Attributes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "type": "Campaign",
+          "url": "/services/data/v48.0/sobjects/Campaign/7015w000000nRWYAA2"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "type",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "$id": "#/properties/attributes/properties/type",
+          "type": "string",
+          "title": "The Type Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Campaign"
+          ]
+        },
+        "url": {
+          "$id": "#/properties/attributes/properties/url",
+          "type": "string",
+          "title": "The Url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/services/data/v48.0/sobjects/Campaign/7015w000000nRWYAA2"
+          ]
+        }
+      }
+    },
+    "Id": {
+      "$id": "#/properties/Id",
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "7015w000000nRWYAA2"
+      ]
+    },
+    "IsDeleted": {
+      "$id": "#/properties/IsDeleted",
+      "type": "boolean",
+      "title": "The Isdeleted Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "Name": {
+      "$id": "#/properties/Name",
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "my api campaing"
+      ]
+    },
+    "ParentId": {
+      "$id": "#/properties/ParentId",
+      "type": "null",
+      "title": "The Parentid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Type": {
+      "$id": "#/properties/Type",
+      "type": "string",
+      "title": "The Type Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Conference"
+      ]
+    },
+    "Status": {
+      "$id": "#/properties/Status",
+      "type": "string",
+      "title": "The Status Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Planned"
+      ]
+    },
+    "StartDate": {
+      "$id": "#/properties/StartDate",
+      "type": "string",
+      "title": "The Startdate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22"
+      ]
+    },
+    "EndDate": {
+      "$id": "#/properties/EndDate",
+      "type": "string",
+      "title": "The Enddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22"
+      ]
+    },
+    "ExpectedRevenue": {
+      "$id": "#/properties/ExpectedRevenue",
+      "$type": "number",
+      "title": "The Expectedrevenue Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        9999999.0
+      ]
+    },
+    "BudgetedCost": {
+      "$id": "#/properties/BudgetedCost",
+      "type": ["number", "null"],
+      "title": "The Budgetedcost Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        999999.0
+      ]
+    },
+    "ActualCost": {
+      "$id": "#/properties/ActualCost",
+      "type": ["number", "null"],
+      "title": "The Actualcost Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        999999.0
+      ]
+    },
+    "ExpectedResponse": {
+      "$id": "#/properties/ExpectedResponse",
+      "type": "number",
+      "title": "The Expectedresponse Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.9
+      ]
+    },
+    "NumberSent": {
+      "$id": "#/properties/NumberSent",
+      "type": "number",
+      "title": "The Numbersent Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "IsActive": {
+      "$id": "#/properties/IsActive",
+      "type": "boolean",
+      "title": "The Isactive Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "Description": {
+      "$id": "#/properties/Description",
+      "type": "string",
+      "title": "The Description Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "my description"
+      ]
+    },
+    "NumberOfLeads": {
+      "$id": "#/properties/NumberOfLeads",
+      "type": "integer",
+      "title": "The Numberofleads Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "NumberOfConvertedLeads": {
+      "$id": "#/properties/NumberOfConvertedLeads",
+      "type": "integer",
+      "title": "The Numberofconvertedleads Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "NumberOfContacts": {
+      "$id": "#/properties/NumberOfContacts",
+      "type": "integer",
+      "title": "The Numberofcontacts Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "NumberOfResponses": {
+      "$id": "#/properties/NumberOfResponses",
+      "type": "integer",
+      "title": "The Numberofresponses Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "NumberOfOpportunities": {
+      "$id": "#/properties/NumberOfOpportunities",
+      "type": "integer",
+      "title": "The Numberofopportunities Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "NumberOfWonOpportunities": {
+      "$id": "#/properties/NumberOfWonOpportunities",
+      "type": "integer",
+      "title": "The Numberofwonopportunities Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "AmountAllOpportunities": {
+      "$id": "#/properties/AmountAllOpportunities",
+      "type": "number",
+      "title": "The Amountallopportunities Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "AmountWonOpportunities": {
+      "$id": "#/properties/AmountWonOpportunities",
+      "type": "number",
+      "title": "The Amountwonopportunities Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0.0
+      ]
+    },
+    "OwnerId": {
+      "$id": "#/properties/OwnerId",
+      "type": "string",
+      "title": "The Ownerid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0055w00000A8l72AAB"
+      ]
+    },
+    "CreatedDate": {
+      "$id": "#/properties/CreatedDate",
+      "type": "string",
+      "title": "The Createddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22T00:28:47.000+0000"
+      ]
+    },
+    "CreatedById": {
+      "$id": "#/properties/CreatedById",
+      "type": "string",
+      "title": "The Createdbyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0055w00000A8l72AAB"
+      ]
+    },
+    "LastModifiedDate": {
+      "$id": "#/properties/LastModifiedDate",
+      "type": "string",
+      "title": "The Lastmodifieddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22T00:28:47.000+0000"
+      ]
+    },
+    "LastModifiedById": {
+      "$id": "#/properties/LastModifiedById",
+      "type": "string",
+      "title": "The Lastmodifiedbyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0055w00000A8l72AAB"
+      ]
+    },
+    "SystemModstamp": {
+      "$id": "#/properties/SystemModstamp",
+      "type": "string",
+      "title": "The Systemmodstamp Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22T00:28:47.000+0000"
+      ]
+    },
+    "LastActivityDate": {
+      "$id": "#/properties/LastActivityDate",
+      "type": "null",
+      "title": "The Lastactivitydate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "LastViewedDate": {
+      "$id": "#/properties/LastViewedDate",
+      "type": "string",
+      "title": "The Lastvieweddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22T00:28:48.000+0000"
+      ]
+    },
+    "LastReferencedDate": {
+      "$id": "#/properties/LastReferencedDate",
+      "type": "string",
+      "title": "The Lastreferenceddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-22T00:28:48.000+0000"
+      ]
+    },
+    "CampaignMemberRecordTypeId": {
+      "$id": "#/properties/CampaignMemberRecordTypeId",
+      "type": "null",
+      "title": "The Campaignmemberrecordtypeid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    }
+  }
+}

@@ -7,7 +7,7 @@ Feature: SalesForce Opportunity
       """
       { "Name":"New Opportunity","CloseDate":"2015-03-02","StageName":"Prospecting","Probability":10 }
       """
-    And I save the created request endpoint for deleting
+    And I save the request endpoint for deleting
     Then I validate the response has status code 201
     And Response body should match with "src/test/resources/schemas/examples/sfdcPostAccountSchema.json" json schema
     And I validate the response contains:

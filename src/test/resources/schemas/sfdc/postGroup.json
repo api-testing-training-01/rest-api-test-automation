@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "success",
+    "errors"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "00G3h000000yJQyEAM"
+      ]
+    },
+    "success": {
+      "type": "boolean",
+      "title": "The Success Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "errors": {
+      "type": "array",
+      "title": "The Errors Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true
+    }
+  }
+}

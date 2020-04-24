@@ -1,0 +1,423 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "objectDescribe",
+    "recentItems"
+  ],
+  "properties": {
+    "objectDescribe": {
+      "$id": "#/properties/objectDescribe",
+      "type": "object",
+      "title": "The Objectdescribe Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "layoutable": false,
+          "mergeable": false,
+          "isInterface": false,
+          "feedEnabled": false,
+          "isSubtype": false,
+          "undeletable": false,
+          "replicateable": true,
+          "createable": true,
+          "name": "Group",
+          "custom": false,
+          "keyPrefix": "00G",
+          "triggerable": false,
+          "deletable": true,
+          "label": "Group",
+          "deprecatedAndHidden": false,
+          "activateable": false,
+          "searchable": true,
+          "mruEnabled": false,
+          "labelPlural": "Group",
+          "retrieveable": true,
+          "urls": {
+            "defaultValues": "/services/data/v48.0/sobjects/Group/defaultValues?recordTypeId&fields",
+            "sobject": "/services/data/v48.0/sobjects/Group",
+            "rowTemplate": "/services/data/v48.0/sobjects/Group/{ID}",
+            "describe": "/services/data/v48.0/sobjects/Group/describe"
+          },
+          "deepCloneable": false,
+          "updateable": true,
+          "queryable": true,
+          "hasSubtypes": false,
+          "customSetting": false
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "activateable",
+        "createable",
+        "custom",
+        "customSetting",
+        "deepCloneable",
+        "deletable",
+        "deprecatedAndHidden",
+        "feedEnabled",
+        "hasSubtypes",
+        "isInterface",
+        "isSubtype",
+        "keyPrefix",
+        "label",
+        "labelPlural",
+        "layoutable",
+        "mergeable",
+        "mruEnabled",
+        "name",
+        "queryable",
+        "replicateable",
+        "retrieveable",
+        "searchable",
+        "triggerable",
+        "undeletable",
+        "updateable",
+        "urls"
+      ],
+      "properties": {
+        "activateable": {
+          "$id": "#/properties/objectDescribe/properties/activateable",
+          "type": "boolean",
+          "title": "The Activateable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "createable": {
+          "$id": "#/properties/objectDescribe/properties/createable",
+          "type": "boolean",
+          "title": "The Createable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "custom": {
+          "$id": "#/properties/objectDescribe/properties/custom",
+          "type": "boolean",
+          "title": "The Custom Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "customSetting": {
+          "$id": "#/properties/objectDescribe/properties/customSetting",
+          "type": "boolean",
+          "title": "The Customsetting Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "deepCloneable": {
+          "$id": "#/properties/objectDescribe/properties/deepCloneable",
+          "type": "boolean",
+          "title": "The Deepcloneable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "deletable": {
+          "$id": "#/properties/objectDescribe/properties/deletable",
+          "type": "boolean",
+          "title": "The Deletable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "deprecatedAndHidden": {
+          "$id": "#/properties/objectDescribe/properties/deprecatedAndHidden",
+          "type": "boolean",
+          "title": "The Deprecatedandhidden Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "feedEnabled": {
+          "$id": "#/properties/objectDescribe/properties/feedEnabled",
+          "type": "boolean",
+          "title": "The Feedenabled Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "hasSubtypes": {
+          "$id": "#/properties/objectDescribe/properties/hasSubtypes",
+          "type": "boolean",
+          "title": "The Hassubtypes Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "isInterface": {
+          "$id": "#/properties/objectDescribe/properties/isInterface",
+          "type": "boolean",
+          "title": "The Isinterface Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "isSubtype": {
+          "$id": "#/properties/objectDescribe/properties/isSubtype",
+          "type": "boolean",
+          "title": "The Issubtype Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "keyPrefix": {
+          "$id": "#/properties/objectDescribe/properties/keyPrefix",
+          "type": "string",
+          "title": "The Keyprefix Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "00G"
+          ]
+        },
+        "label": {
+          "$id": "#/properties/objectDescribe/properties/label",
+          "type": "string",
+          "title": "The Label Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Group"
+          ]
+        },
+        "labelPlural": {
+          "$id": "#/properties/objectDescribe/properties/labelPlural",
+          "type": "string",
+          "title": "The Labelplural Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Group"
+          ]
+        },
+        "layoutable": {
+          "$id": "#/properties/objectDescribe/properties/layoutable",
+          "type": "boolean",
+          "title": "The Layoutable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "mergeable": {
+          "$id": "#/properties/objectDescribe/properties/mergeable",
+          "type": "boolean",
+          "title": "The Mergeable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "mruEnabled": {
+          "$id": "#/properties/objectDescribe/properties/mruEnabled",
+          "type": "boolean",
+          "title": "The Mruenabled Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "name": {
+          "$id": "#/properties/objectDescribe/properties/name",
+          "type": "string",
+          "title": "The Name Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Group"
+          ]
+        },
+        "queryable": {
+          "$id": "#/properties/objectDescribe/properties/queryable",
+          "type": "boolean",
+          "title": "The Queryable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "replicateable": {
+          "$id": "#/properties/objectDescribe/properties/replicateable",
+          "type": "boolean",
+          "title": "The Replicateable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "retrieveable": {
+          "$id": "#/properties/objectDescribe/properties/retrieveable",
+          "type": "boolean",
+          "title": "The Retrieveable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "searchable": {
+          "$id": "#/properties/objectDescribe/properties/searchable",
+          "type": "boolean",
+          "title": "The Searchable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "triggerable": {
+          "$id": "#/properties/objectDescribe/properties/triggerable",
+          "type": "boolean",
+          "title": "The Triggerable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "undeletable": {
+          "$id": "#/properties/objectDescribe/properties/undeletable",
+          "type": "boolean",
+          "title": "The Undeletable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            false
+          ]
+        },
+        "updateable": {
+          "$id": "#/properties/objectDescribe/properties/updateable",
+          "type": "boolean",
+          "title": "The Updateable Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": false,
+          "examples": [
+            true
+          ]
+        },
+        "urls": {
+          "$id": "#/properties/objectDescribe/properties/urls",
+          "type": "object",
+          "title": "The Urls Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "defaultValues": "/services/data/v48.0/sobjects/Group/defaultValues?recordTypeId&fields",
+              "sobject": "/services/data/v48.0/sobjects/Group",
+              "rowTemplate": "/services/data/v48.0/sobjects/Group/{ID}",
+              "describe": "/services/data/v48.0/sobjects/Group/describe"
+            }
+          ],
+          "additionalProperties": true,
+          "required": [
+            "rowTemplate",
+            "defaultValues",
+            "describe",
+            "sobject"
+          ],
+          "properties": {
+            "rowTemplate": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/rowTemplate",
+              "type": "string",
+              "title": "The Rowtemplate Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "/services/data/v48.0/sobjects/Group/{ID}"
+              ]
+            },
+            "defaultValues": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/defaultValues",
+              "type": "string",
+              "title": "The Defaultvalues Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "/services/data/v48.0/sobjects/Group/defaultValues?recordTypeId&fields"
+              ]
+            },
+            "describe": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/describe",
+              "type": "string",
+              "title": "The Describe Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "/services/data/v48.0/sobjects/Group/describe"
+              ]
+            },
+            "sobject": {
+              "$id": "#/properties/objectDescribe/properties/urls/properties/sobject",
+              "type": "string",
+              "title": "The Sobject Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "/services/data/v48.0/sobjects/Group"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "recentItems": {
+      "$id": "#/properties/recentItems",
+      "type": "array",
+      "title": "The Recentitems Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true,
+      "items": {
+        "$id": "#/properties/recentItems/items",
+        "type": "null",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null,
+        "examples": [
+          null
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "attributes",
+    "Id",
+    "Name",
+    "DeveloperName",
+    "RelatedId",
+    "Type",
+    "Email",
+    "OwnerId",
+    "DoesSendEmailToMembers",
+    "DoesIncludeBosses",
+    "CreatedDate",
+    "CreatedById",
+    "LastModifiedDate",
+    "LastModifiedById",
+    "SystemModstamp"
+  ],
+  "properties": {
+    "attributes": {
+      "type": "object",
+      "title": "The Attributes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "type": "Group",
+          "url": "/services/data/v48.0/sobjects/Group/00G3h000000yJZDEA2"
+        }
+      ],
+      "additionalProperties": true,
+      "required": [
+        "type",
+        "url"
+      ],
+      "properties": {
+        "type": {
+          "type": "string",
+          "title": "The Type Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Group"
+          ]
+        },
+        "url": {
+          "type": "string",
+          "title": "The Url Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "/services/data/v48.0/sobjects/Group/00G3h000000yJZDEA2"
+          ]
+        }
+      }
+    },
+    "Id": {
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "00G3h000000yJZDEA2"
+      ]
+    },
+    "Name": {
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Group2"
+      ]
+    },
+    "DeveloperName": {
+      "type": "string",
+      "title": "The Developername Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Group2"
+      ]
+    },
+    "RelatedId": {
+      "type": "null",
+      "title": "The Relatedid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "Type": {
+      "type": "string",
+      "title": "The Type Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Regular"
+      ]
+    },
+    "Email": {
+      "type": "null",
+      "title": "The Email Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null,
+      "examples": [
+        null
+      ]
+    },
+    "OwnerId": {
+      "type": "string",
+      "title": "The Ownerid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "00D3h000002DY84EAG"
+      ]
+    },
+    "DoesSendEmailToMembers": {
+      "type": "boolean",
+      "title": "The Doessendemailtomembers Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        false
+      ]
+    },
+    "DoesIncludeBosses": {
+      "type": "boolean",
+      "title": "The Doesincludebosses Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false,
+      "examples": [
+        true
+      ]
+    },
+    "CreatedDate": {
+      "type": "string",
+      "title": "The Createddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:31:53.000+0000"
+      ]
+    },
+    "CreatedById": {
+      "type": "string",
+      "title": "The Createdbyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0053h000000yBDkAAM"
+      ]
+    },
+    "LastModifiedDate": {
+      "type": "string",
+      "title": "The Lastmodifieddate Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:31:53.000+0000"
+      ]
+    },
+    "LastModifiedById": {
+      "type": "string",
+      "title": "The Lastmodifiedbyid Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "0053h000000yBDkAAM"
+      ]
+    },
+    "SystemModstamp": {
+      "type": "string",
+      "title": "The Systemmodstamp Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "2020-04-19T21:31:53.000+0000"
+      ]
+    }
+  }
+}

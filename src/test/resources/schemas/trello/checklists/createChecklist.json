@@ -1,0 +1,80 @@
+{
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "id",
+    "name",
+    "idCard",
+    "pos",
+    "idBoard",
+    "checkItems",
+    "limits"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9d9444c04bc93ad88ae388"
+      ]
+    },
+    "name": {
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "Checklist"
+      ]
+    },
+    "idCard": {
+      "type": "string",
+      "title": "The Idcard Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9d941ba3b5df0c4932525b"
+      ]
+    },
+    "pos": {
+      "type": "integer",
+      "title": "The Pos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        16384.0
+      ]
+    },
+    "idBoard": {
+      "type": "string",
+      "title": "The Idboard Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": "",
+      "examples": [
+        "5e9d93b3f14f0337d62afc50"
+      ]
+    },
+    "checkItems": {
+      "type": "array",
+      "title": "The Checkitems Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "examples": [
+        []
+      ],
+      "additionalItems": true
+    },
+    "limits": {
+      "type": "object",
+      "title": "The Limits Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {}
+      ],
+      "additionalProperties": true
+    }
+  }
+}

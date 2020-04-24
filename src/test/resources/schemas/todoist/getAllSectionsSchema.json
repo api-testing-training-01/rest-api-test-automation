@@ -1,0 +1,82 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "name": "Welcome! Let’s get started with a few tips",
+        "project_id": 2232593518.0,
+        "order": 1.0,
+        "id": 9007442.0
+      },
+      {
+        "name": "To go further",
+        "project_id": 2232593518.0,
+        "order": 2.0,
+        "id": 9007443.0
+      },
+      {
+        "name": "API Testing section",
+        "project_id": 2233189686.0,
+        "order": 1.0,
+        "id": 9445885.0
+      }
+    ],
+    "required": [
+      "id",
+      "project_id",
+      "order",
+      "name"
+    ],
+    "properties": {
+      "id": {
+        "$id": "#/items/properties/id",
+        "type": "integer",
+        "title": "The Id Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          9007442
+        ]
+      },
+      "project_id": {
+        "$id": "#/items/properties/project_id",
+        "type": "integer",
+        "title": "The Project_id Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          2232593518
+        ]
+      },
+      "order": {
+        "$id": "#/items/properties/order",
+        "type": "integer",
+        "title": "The Order Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": 0,
+        "examples": [
+          1
+        ]
+      },
+      "name": {
+        "$id": "#/items/properties/name",
+        "type": "string",
+        "title": "The Name Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Welcome! Let’s get started with a few tips"
+        ]
+      }
+    }
+  }
+}

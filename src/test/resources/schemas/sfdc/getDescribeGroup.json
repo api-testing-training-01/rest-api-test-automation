@@ -1,0 +1,893 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "actionOverrides",
+    "activateable",
+    "childRelationships",
+    "compactLayoutable",
+    "createable",
+    "custom",
+    "customSetting",
+    "deepCloneable",
+    "defaultImplementation",
+    "deletable",
+    "deprecatedAndHidden",
+    "extendedBy",
+    "extendsInterfaces",
+    "feedEnabled",
+    "fields",
+    "hasSubtypes",
+    "implementedBy",
+    "implementsInterfaces",
+    "isInterface",
+    "isSubtype",
+    "keyPrefix",
+    "label",
+    "labelPlural",
+    "layoutable",
+    "listviewable",
+    "lookupLayoutable",
+    "mergeable",
+    "mruEnabled",
+    "name",
+    "namedLayoutInfos",
+    "networkScopeFieldName",
+    "queryable",
+    "recordTypeInfos",
+    "replicateable",
+    "retrieveable",
+    "searchLayoutable",
+    "searchable",
+    "supportedScopes",
+    "triggerable",
+    "undeletable",
+    "updateable",
+    "urls"
+  ],
+  "properties": {
+    "actionOverrides": {
+      "type": "array",
+      "title": "The Actionoverrides Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "null",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null
+      }
+    },
+    "activateable": {
+      "type": "boolean",
+      "title": "The Activateable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "childRelationships": {
+      "type": "array",
+      "title": "The Childrelationships Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "additionalProperties": true,
+        "required": [
+          "cascadeDelete",
+          "childSObject",
+          "deprecatedAndHidden",
+          "field",
+          "junctionIdListNames",
+          "junctionReferenceTo",
+          "relationshipName",
+          "restrictedDelete"
+        ],
+        "properties": {
+          "cascadeDelete": {
+            "type": "boolean",
+            "title": "The Cascadedelete Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "childSObject": {
+            "type": "string",
+            "title": "The Childsobject Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "deprecatedAndHidden": {
+            "type": "boolean",
+            "title": "The Deprecatedandhidden Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "field": {
+            "type": "string",
+            "title": "The Field Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "junctionIdListNames": {
+            "type": "array",
+            "title": "The Junctionidlistnames Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "additionalItems": true,
+            "items": {
+              "type": "null",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null
+            }
+          },
+          "junctionReferenceTo": {
+            "type": "array",
+            "title": "The Junctionreferenceto Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "additionalItems": true,
+            "items": {
+              "type": "null",
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null
+            }
+          },
+          "relationshipName": {
+            "type": ["null","string"],
+            "title": "The Relationshipname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "restrictedDelete": {
+            "type": "boolean",
+            "title": "The Restricteddelete Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          }
+        }
+      }
+    },
+    "compactLayoutable": {
+      "type": "boolean",
+      "title": "The Compactlayoutable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "createable": {
+      "type": "boolean",
+      "title": "The Createable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "custom": {
+      "type": "boolean",
+      "title": "The Custom Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "customSetting": {
+      "type": "boolean",
+      "title": "The Customsetting Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "deepCloneable": {
+      "type": "boolean",
+      "title": "The Deepcloneable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "defaultImplementation": {
+      "type": "null",
+      "title": "The Defaultimplementation Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "deletable": {
+      "type": "boolean",
+      "title": "The Deletable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "deprecatedAndHidden": {
+      "type": "boolean",
+      "title": "The Deprecatedandhidden Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "extendedBy": {
+      "type": "null",
+      "title": "The Extendedby Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "extendsInterfaces": {
+      "type": "null",
+      "title": "The Extendsinterfaces Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "feedEnabled": {
+      "type": "boolean",
+      "title": "The Feedenabled Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "fields": {
+      "type": "array",
+      "title": "The Fields Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "additionalProperties": true,
+        "required": [
+          "aggregatable",
+          "aiPredictionField",
+          "autoNumber",
+          "byteLength",
+          "calculated",
+          "calculatedFormula",
+          "cascadeDelete",
+          "caseSensitive",
+          "compoundFieldName",
+          "controllerName",
+          "createable",
+          "custom",
+          "defaultValue",
+          "defaultValueFormula",
+          "defaultedOnCreate",
+          "dependentPicklist",
+          "deprecatedAndHidden",
+          "digits",
+          "displayLocationInDecimal",
+          "encrypted",
+          "externalId",
+          "extraTypeInfo",
+          "filterable",
+          "filteredLookupInfo",
+          "formulaTreatNullNumberAsZero",
+          "groupable",
+          "highScaleNumber",
+          "htmlFormatted",
+          "idLookup",
+          "inlineHelpText",
+          "label",
+          "length",
+          "mask",
+          "maskType",
+          "name",
+          "nameField",
+          "namePointing",
+          "nillable",
+          "permissionable",
+          "picklistValues",
+          "polymorphicForeignKey",
+          "precision",
+          "queryByDistance",
+          "referenceTargetField",
+          "referenceTo",
+          "relationshipName",
+          "relationshipOrder",
+          "restrictedDelete",
+          "restrictedPicklist",
+          "scale",
+          "searchPrefilterable",
+          "soapType",
+          "sortable",
+          "type",
+          "unique",
+          "updateable",
+          "writeRequiresMasterRead"
+        ],
+        "properties": {
+          "aggregatable": {
+            "type": "boolean",
+            "title": "The Aggregatable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "aiPredictionField": {
+            "type": "boolean",
+            "title": "The Aipredictionfield Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "autoNumber": {
+            "type": "boolean",
+            "title": "The Autonumber Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "byteLength": {
+            "type": "integer",
+            "title": "The Bytelength Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0
+          },
+          "calculated": {
+            "type": "boolean",
+            "title": "The Calculated Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "calculatedFormula": {
+            "type": "null",
+            "title": "The Calculatedformula Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "cascadeDelete": {
+            "type": "boolean",
+            "title": "The Cascadedelete Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "caseSensitive": {
+            "type": "boolean",
+            "title": "The Casesensitive Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "compoundFieldName": {
+            "type": "null",
+            "title": "The Compoundfieldname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "controllerName": {
+            "type": "null",
+            "title": "The Controllername Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "createable": {
+            "type": "boolean",
+            "title": "The Createable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "custom": {
+            "type": "boolean",
+            "title": "The Custom Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "defaultValue": {
+            "type": ["boolean","null"],
+            "title": "The Defaultvalue Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "defaultValueFormula": {
+            "type": "null",
+            "title": "The Defaultvalueformula Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "defaultedOnCreate": {
+            "type": "boolean",
+            "title": "The Defaultedoncreate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "dependentPicklist": {
+            "type": "boolean",
+            "title": "The Dependentpicklist Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "deprecatedAndHidden": {
+            "type": "boolean",
+            "title": "The Deprecatedandhidden Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "digits": {
+            "type": "integer",
+            "title": "The Digits Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0
+          },
+          "displayLocationInDecimal": {
+            "type": "boolean",
+            "title": "The Displaylocationindecimal Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "encrypted": {
+            "type": "boolean",
+            "title": "The Encrypted Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "externalId": {
+            "type": "boolean",
+            "title": "The Externalid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "extraTypeInfo": {
+            "type": "null",
+            "title": "The Extratypeinfo Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "filterable": {
+            "type": "boolean",
+            "title": "The Filterable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "filteredLookupInfo": {
+            "type": "null",
+            "title": "The Filteredlookupinfo Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "formulaTreatNullNumberAsZero": {
+            "type": "boolean",
+            "title": "The Formulatreatnullnumberaszero Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "groupable": {
+            "type": "boolean",
+            "title": "The Groupable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "highScaleNumber": {
+            "type": "boolean",
+            "title": "The Highscalenumber Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "htmlFormatted": {
+            "type": "boolean",
+            "title": "The Htmlformatted Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "idLookup": {
+            "type": "boolean",
+            "title": "The Idlookup Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "inlineHelpText": {
+            "type": "null",
+            "title": "The Inlinehelptext Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "label": {
+            "type": "string",
+            "title": "The Label Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "length": {
+            "type": "integer",
+            "title": "The Length Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0
+          },
+          "mask": {
+            "type": "null",
+            "title": "The Mask Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "maskType": {
+            "type": "null",
+            "title": "The Masktype Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "nameField": {
+            "type": "boolean",
+            "title": "The Namefield Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "namePointing": {
+            "type": "boolean",
+            "title": "The Namepointing Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "nillable": {
+            "type": "boolean",
+            "title": "The Nillable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "permissionable": {
+            "type": "boolean",
+            "title": "The Permissionable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "picklistValues": {
+            "type": "array",
+            "title": "The Picklistvalues Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "additionalItems": true,
+            "items": {
+              "type": ["object","null"],
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null
+            }
+          },
+          "polymorphicForeignKey": {
+            "type": "boolean",
+            "title": "The Polymorphicforeignkey Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "precision": {
+            "type": "integer",
+            "title": "The Precision Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0
+          },
+          "queryByDistance": {
+            "type": "boolean",
+            "title": "The Querybydistance Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "referenceTargetField": {
+            "type": "null",
+            "title": "The Referencetargetfield Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "referenceTo": {
+            "type": "array",
+            "title": "The Referenceto Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": [],
+            "additionalItems": true,
+            "items": {
+              "type": ["null","string"],
+              "title": "The Items Schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null
+            }
+          },
+          "relationshipName": {
+            "type": ["string","null"],
+            "title": "The Relationshipname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "relationshipOrder": {
+            "type": "null",
+            "title": "The Relationshiporder Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null
+          },
+          "restrictedDelete": {
+            "type": "boolean",
+            "title": "The Restricteddelete Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "restrictedPicklist": {
+            "type": "boolean",
+            "title": "The Restrictedpicklist Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "scale": {
+            "type": "integer",
+            "title": "The Scale Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0
+          },
+          "searchPrefilterable": {
+            "type": "boolean",
+            "title": "The Searchprefilterable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "soapType": {
+            "type": "string",
+            "title": "The Soaptype Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "sortable": {
+            "type": "boolean",
+            "title": "The Sortable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "type": {
+            "type": "string",
+            "title": "The Type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "unique": {
+            "type": "boolean",
+            "title": "The Unique Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "updateable": {
+            "type": "boolean",
+            "title": "The Updateable Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          },
+          "writeRequiresMasterRead": {
+            "type": "boolean",
+            "title": "The Writerequiresmasterread Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false
+          }
+        }
+      }
+    },
+    "hasSubtypes": {
+      "type": "boolean",
+      "title": "The Hassubtypes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "implementedBy": {
+      "type": "null",
+      "title": "The Implementedby Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "implementsInterfaces": {
+      "type": "null",
+      "title": "The Implementsinterfaces Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "isInterface": {
+      "type": "boolean",
+      "title": "The Isinterface Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "isSubtype": {
+      "type": "boolean",
+      "title": "The Issubtype Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "keyPrefix": {
+      "type": "string",
+      "title": "The Keyprefix Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "label": {
+      "type": "string",
+      "title": "The Label Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "labelPlural": {
+      "type": "string",
+      "title": "The Labelplural Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "layoutable": {
+      "type": "boolean",
+      "title": "The Layoutable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "listviewable": {
+      "type": "null",
+      "title": "The Listviewable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "lookupLayoutable": {
+      "type": "null",
+      "title": "The Lookuplayoutable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "mergeable": {
+      "type": "boolean",
+      "title": "The Mergeable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "mruEnabled": {
+      "type": "boolean",
+      "title": "The Mruenabled Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "name": {
+      "type": "string",
+      "title": "The Name Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "namedLayoutInfos": {
+      "type": "array",
+      "title": "The Namedlayoutinfos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "null",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null
+      }
+    },
+    "networkScopeFieldName": {
+      "type": "null",
+      "title": "The Networkscopefieldname Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": null
+    },
+    "queryable": {
+      "type": "boolean",
+      "title": "The Queryable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "recordTypeInfos": {
+      "type": "array",
+      "title": "The Recordtypeinfos Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "null",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": null
+      }
+    },
+    "replicateable": {
+      "type": "boolean",
+      "title": "The Replicateable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "retrieveable": {
+      "type": "boolean",
+      "title": "The Retrieveable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "searchLayoutable": {
+      "type": "boolean",
+      "title": "The Searchlayoutable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "searchable": {
+      "type": "boolean",
+      "title": "The Searchable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "supportedScopes": {
+      "type": "array",
+      "title": "The Supportedscopes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": [],
+      "additionalItems": true,
+      "items": {
+        "type": "object",
+        "title": "The Items Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": {},
+        "additionalProperties": true,
+        "required": [
+          "label",
+          "name"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "title": "The Label Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          },
+          "name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": ""
+          }
+        }
+      }
+    },
+    "triggerable": {
+      "type": "boolean",
+      "title": "The Triggerable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "undeletable": {
+      "type": "boolean",
+      "title": "The Undeletable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "updateable": {
+      "type": "boolean",
+      "title": "The Updateable Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": false
+    },
+    "urls": {
+      "type": "object",
+      "title": "The Urls Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "additionalProperties": true,
+      "required": [
+        "rowTemplate",
+        "defaultValues",
+        "describe",
+        "sobject"
+      ],
+      "properties": {
+        "rowTemplate": {
+          "type": "string",
+          "title": "The Rowtemplate Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "defaultValues": {
+          "type": "string",
+          "title": "The Defaultvalues Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "describe": {
+          "type": "string",
+          "title": "The Describe Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        },
+        "sobject": {
+          "type": "string",
+          "title": "The Sobject Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": ""
+        }
+      }
+    }
+  }
+}

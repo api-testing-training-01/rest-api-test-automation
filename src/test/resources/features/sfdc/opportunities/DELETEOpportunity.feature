@@ -8,7 +8,7 @@ Feature: SalesForce Opportunity
       """
     Then I validate the response has status code 201
     And I save the response as "Op"
-    And I save the created request endpoint for deleting
+    And I save the request endpoint for deleting
 
   @cleanData @acceptance
   Scenario: Delete Opportunity
