@@ -1,0 +1,470 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "title": "The Root Schema",
+    "description": "The root schema comprises the entire JSON document.",
+    "default": {},
+    "additionalProperties": true,
+    "required": [
+        "attributes",
+        "Id",
+        "IsDeleted",
+        "AccountId",
+        "IsPrivate",
+        "Name",
+        "Description",
+        "StageName",
+        "Amount",
+        "Probability",
+        "ExpectedRevenue",
+        "TotalOpportunityQuantity",
+        "CloseDate",
+        "Type",
+        "NextStep",
+        "LeadSource",
+        "IsClosed",
+        "IsWon",
+        "ForecastCategory",
+        "ForecastCategoryName",
+        "CampaignId",
+        "HasOpportunityLineItem",
+        "Pricebook2Id",
+        "OwnerId",
+        "CreatedDate",
+        "CreatedById",
+        "LastModifiedDate",
+        "LastModifiedById",
+        "SystemModstamp",
+        "LastActivityDate",
+        "FiscalQuarter",
+        "FiscalYear",
+        "Fiscal",
+        "ContactId",
+        "LastViewedDate",
+        "LastReferencedDate",
+        "HasOpenActivity",
+        "HasOverdueTask",
+        "DeliveryInstallationStatus__c",
+        "TrackingNumber__c",
+        "OrderNumber__c",
+        "CurrentGenerators__c",
+        "MainCompetitors__c"
+    ],
+    "properties": {
+        "attributes": {
+            "type": "object",
+            "title": "The Attributes Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": {},
+            "examples": [
+                {
+                    "type": "Opportunity",
+                    "url": "/services/data/v48.0/sobjects/Opportunity/0065w00002279RtAAI"
+                }
+            ],
+            "additionalProperties": true,
+            "required": [
+                "type",
+                "url"
+            ],
+            "properties": {
+                "type": {
+                    "type": "string",
+                    "title": "The Type Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "Opportunity"
+                    ]
+                },
+                "url": {
+                    "type": "string",
+                    "title": "The Url Schema",
+                    "description": "An explanation about the purpose of this instance.",
+                    "default": "",
+                    "examples": [
+                        "/services/data/v48.0/sobjects/Opportunity/0065w00002279RtAAI"
+                    ]
+                }
+            }
+        },
+        "Id": {
+            "type": "string",
+            "title": "The Id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "0065w00002279RtAAI"
+            ]
+        },
+        "IsDeleted": {
+            "type": "boolean",
+            "title": "The Isdeleted Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "AccountId": {
+            "type": "null",
+            "title": "The Accountid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "IsPrivate": {
+            "type": "boolean",
+            "title": "The Isprivate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "Name": {
+            "type": "string",
+            "title": "The Name Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Test 1"
+            ]
+        },
+        "Description": {
+            "type": "null",
+            "title": "The Description Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "StageName": {
+            "type": "string",
+            "title": "The Stagename Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Prospecting"
+            ]
+        },
+        "Amount": {
+            "type": "null",
+            "title": "The Amount Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "Probability": {
+            "type": "number",
+            "title": "The Probability Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                10.0
+            ]
+        },
+        "ExpectedRevenue": {
+            "type": "null",
+            "title": "The Expectedrevenue Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "TotalOpportunityQuantity": {
+            "type": "null",
+            "title": "The Totalopportunityquantity Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "CloseDate": {
+            "type": "string",
+            "title": "The Closedate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2015-03-02"
+            ]
+        },
+        "Type": {
+            "type": "null",
+            "title": "The Type Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "NextStep": {
+            "type": "null",
+            "title": "The Nextstep Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "LeadSource": {
+            "type": "null",
+            "title": "The Leadsource Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "IsClosed": {
+            "type": "boolean",
+            "title": "The Isclosed Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "IsWon": {
+            "type": "boolean",
+            "title": "The Iswon Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "ForecastCategory": {
+            "type": "string",
+            "title": "The Forecastcategory Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Pipeline"
+            ]
+        },
+        "ForecastCategoryName": {
+            "type": "string",
+            "title": "The Forecastcategoryname Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "Pipeline"
+            ]
+        },
+        "CampaignId": {
+            "type": "null",
+            "title": "The Campaignid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "HasOpportunityLineItem": {
+            "type": "boolean",
+            "title": "The Hasopportunitylineitem Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "Pricebook2Id": {
+            "type": "null",
+            "title": "The Pricebook2id Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "OwnerId": {
+            "type": "string",
+            "title": "The Ownerid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "0055w00000BZoHZAA1"
+            ]
+        },
+        "CreatedDate": {
+            "type": "string",
+            "title": "The Createddate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-04-20T12:49:31.000+0000"
+            ]
+        },
+        "CreatedById": {
+            "type": "string",
+            "title": "The Createdbyid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "0055w00000BZoHZAA1"
+            ]
+        },
+        "LastModifiedDate": {
+            "type": "string",
+            "title": "The Lastmodifieddate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-04-20T12:49:31.000+0000"
+            ]
+        },
+        "LastModifiedById": {
+            "type": "string",
+            "title": "The Lastmodifiedbyid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "0055w00000BZoHZAA1"
+            ]
+        },
+        "SystemModstamp": {
+            "type": "string",
+            "title": "The Systemmodstamp Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-04-20T12:49:31.000+0000"
+            ]
+        },
+        "LastActivityDate": {
+            "type": "null",
+            "title": "The Lastactivitydate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "FiscalQuarter": {
+            "type": "integer",
+            "title": "The Fiscalquarter Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                1.0
+            ]
+        },
+        "FiscalYear": {
+            "type": "integer",
+            "title": "The Fiscalyear Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": 0,
+            "examples": [
+                2015.0
+            ]
+        },
+        "Fiscal": {
+            "type": "string",
+            "title": "The Fiscal Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2015 1"
+            ]
+        },
+        "ContactId": {
+            "type": "null",
+            "title": "The Contactid Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "LastViewedDate": {
+            "type": "string",
+            "title": "The Lastvieweddate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-04-20T12:49:31.000+0000"
+            ]
+        },
+        "LastReferencedDate": {
+            "type": "string",
+            "title": "The Lastreferenceddate Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": "",
+            "examples": [
+                "2020-04-20T12:49:31.000+0000"
+            ]
+        },
+        "HasOpenActivity": {
+            "type": "boolean",
+            "title": "The Hasopenactivity Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "HasOverdueTask": {
+            "type": "boolean",
+            "title": "The Hasoverduetask Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": false,
+            "examples": [
+                false
+            ]
+        },
+        "DeliveryInstallationStatus__c": {
+            "type": "null",
+            "title": "The Deliveryinstallationstatus__c Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "TrackingNumber__c": {
+            "type": "null",
+            "title": "The Trackingnumber__c Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "OrderNumber__c": {
+            "type": "null",
+            "title": "The Ordernumber__c Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "CurrentGenerators__c": {
+            "type": "null",
+            "title": "The Currentgenerators__c Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        },
+        "MainCompetitors__c": {
+            "type": "null",
+            "title": "The Maincompetitors__c Schema",
+            "description": "An explanation about the purpose of this instance.",
+            "default": null,
+            "examples": [
+                null
+            ]
+        }
+    }
+}
