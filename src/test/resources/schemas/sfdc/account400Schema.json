@@ -1,0 +1,76 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "array",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": [],
+  "additionalItems": true,
+  "items": {
+    "$id": "#/items",
+    "type": "object",
+    "title": "The Items Schema",
+    "description": "An explanation about the purpose of this instance.",
+    "default": {},
+    "examples": [
+      {
+        "errorCode": "STRING_TOO_LONG",
+        "message": "Nombre de la cuenta: valor de datos demasiado grande: GP Testing kasdklfjlksdj fkjfkljksldjfklasjdfkjasdk jdkalfjlkasdjfkdskfjklsdajfksjdfkl ksdjflksjadkfljskdlfjlkdsjfklsajdfkljsdklfjksadjfksdjfkljaslkfjlksdfjklsadjfklsjdaflkjsadklfjskaldfjklsdjfklsdajfklsajdlkfjsdklfjksldafj kjaskldjfklsdjflkjasdklfjklasdjfklsajfkldjsfkljasdlkfjkldafjklasdjf kljasdklfjklasjfklas dfkjsadklfjksladfjklsajdfkjasdlkfjkasdjf kkk (max length=255)",
+        "fields": [
+          "Name"
+        ]
+      }
+    ],
+    "additionalProperties": true,
+    "required": [
+      "message",
+      "errorCode",
+      "fields"
+    ],
+    "properties": {
+      "message": {
+        "$id": "#/items/properties/message",
+        "type": "string",
+        "title": "The Message Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "Nombre de la cuenta: valor de datos demasiado grande: GP Testing kasdklfjlksdj fkjfkljksldjfklasjdfkjasdk jdkalfjlkasdjfkdskfjklsdajfksjdfkl ksdjflksjadkfljskdlfjlkdsjfklsajdfkljsdklfjksadjfksdjfkljaslkfjlksdfjklsadjfklsjdaflkjsadklfjskaldfjklsdjfklsdajfklsajdlkfjsdklfjksldafj kjaskldjfklsdjflkjasdklfjklasdjfklsajfkldjsfkljasdlkfjkldafjklasdjf kljasdklfjklasjfklas dfkjsadklfjksladfjklsajdfkjasdlkfjkasdjf kkk (max length=255)"
+        ]
+      },
+      "errorCode": {
+        "$id": "#/items/properties/errorCode",
+        "type": "string",
+        "title": "The Errorcode Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": "",
+        "examples": [
+          "STRING_TOO_LONG"
+        ]
+      },
+      "fields": {
+        "$id": "#/items/properties/fields",
+        "type": "array",
+        "title": "The Fields Schema",
+        "description": "An explanation about the purpose of this instance.",
+        "default": [],
+        "examples": [
+          [
+            "Name"
+          ]
+        ],
+        "additionalItems": true,
+        "items": {
+          "$id": "#/items/properties/fields/items",
+          "type": "string",
+          "title": "The Items Schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": "",
+          "examples": [
+            "Name"
+          ]
+        }
+      }
+    }
+  }
+}
