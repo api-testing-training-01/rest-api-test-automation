@@ -23,7 +23,6 @@ Feature: Put/PATCH Lead
         "Status": "Open - Not Contacted"
       }
     """
-    And I save the request endpoint for deleting
     Then I validate the response has status code 204
     When I send a "GET" request to "/Lead/{Lead.id}"
     And I validate the response contains:
@@ -40,7 +39,6 @@ Feature: Put/PATCH Lead
         "Status": "Open - Not Contacted"
       }
     """
-    And I save the request endpoint for deleting
     Then I validate the response has status code 204
     When I send a "GET" request to "/Lead/{Lead.id}"
     And I validate the response should not contain:
