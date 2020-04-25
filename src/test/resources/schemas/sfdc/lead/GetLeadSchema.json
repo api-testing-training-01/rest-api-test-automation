@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "additionalProperties": true,
+  "required": [
+    "attributes",
+    "Id",
+    "LastName",
+    "Company",
+    "Status"
+  ],
+  "properties": {
+    "attributes": {
+      "$id": "#/properties/attributes",
+      "type": "object",
+      "title": "The Attributes Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "type": "Lead",
+          "url": "/services/data/v48.0/sobjects/Lead/00Q5w00001ou55CEAQ"
+        }
+      ],
+      "additionalProperties": true
+    },
+    "Id": {
+      "$id": "#/properties/Id",
+      "type": "string",
+      "title": "The Id Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "LastName": {
+      "$id": "#/properties/LastName",
+      "type": "string",
+      "title": "The Lastname Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+    "Company": {
+      "$id": "#/properties/Company",
+      "type": "string",
+      "title": "The Company Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    },
+
+    "Status": {
+      "$id": "#/properties/Status",
+      "type": "string",
+      "title": "The Status Schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": ""
+    }
+  }
+}

@@ -98,6 +98,12 @@ public class RequestSteps {
         Assert.assertEquals(statusCode, expectedStatusCode);
     }
 
+    @Then("I validate the response has no to be status code {int}")
+    public void iValidateTheResponseHasNotoHaveStatusCode(int expectedStatusCode) {
+        int statusCode = response.getStatusCode();
+        Assert.assertNotEquals(statusCode, expectedStatusCode);
+    }
+
     @Then("I validate the response contains:")
     public void iValidateTheResponseContains(final Map<String, String> validationMap) {
         if (IntStream.of(OK_STATUS_CODE).anyMatch(n -> n == response.getStatusCode())) {
@@ -171,5 +177,11 @@ public class RequestSteps {
         }
     }
 
-
+    @Then("I validate the response should not have status code")
+    public void iValidateTheResponseShouldNotHaveStatusCode(final List expectedStatusCode) {
+        int statusCode = response.getStatusCode();
+        for (Object code : expectedStatusCode) {
+            Assert.assertNotEquals(statusCode, Integer.parseInt(code.toString()));
+        }
+    }
 }
